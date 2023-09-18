@@ -1,0 +1,35 @@
+`include "timer_pkg.svh"
+
+import time_pkg::*;
+
+module main_cntrl(
+	input clk, rst,
+	
+	input time_1ms,
+	output time_t t
+);
+	
+	initial begin
+		t = '0;
+	end
+	
+	always_ff @(posedge clk or posedge rst)
+		if (rst) begin
+			t <= '0;
+		end
+		else begin
+			if (time_1ms) begin
+				if (10'd999 == t.ms) begin
+					t.ms <= '0;
+					if (10'd999 == t.ss)
+						t.ss <= '0;
+					else
+						t.ss <= t.ss + 1'b1;
+				end
+				else
+					t.ms <= t.ms + 1'b1;
+			end
+		end
+	
+
+endmodule : main_cntrl

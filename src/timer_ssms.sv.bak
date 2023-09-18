@@ -1,0 +1,24 @@
+module timer(
+	input clk, rst,
+	
+	input time_1ms,
+	
+);
+
+	typedef struct packed {
+		logic[9:0] ms;
+		logic[9:0] ss;
+	} time_t;
+	
+	time_t t = '0;
+	
+	always_ff @(posedge clk or posedge rst)
+		if (rst) begin
+			t <= '0;
+		end
+		else begin
+		
+		end
+	
+
+endmodule : timer

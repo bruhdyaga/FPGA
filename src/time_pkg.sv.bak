@@ -1,0 +1,9 @@
+package time_pkg;
+
+	typedef struct packed {
+		logic[9:0] ms;
+		logic[9:0] ss;
+	} time_t;
+	
+	
+endpackage 

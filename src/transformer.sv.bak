@@ -1,0 +1,35 @@
+`include "timer_pkg.sv"
+
+import time_pkg::*;
+
+module transformer (
+	input [6:0] t,
+	output logic [3:0] ones,
+   output logic [3:0] tens,
+   output logic [3:0] hundreds,
+   output logic [3:0] thousands
+);
+
+logic digit;
+
+initial begin
+	digit = 10;
+	ones = transform([6:0]t, digit);
+end
+
+initial begin
+	digit = 100;
+	tens = transform([6:0]t, digit);
+end
+
+initial begin
+	digit = 1000;
+	hundreds = transform([6:0]t, digit);
+end
+
+initial begin
+	digit = 10000;
+	thousands = transform([6:0]t, digit);
+end
+
+endmodule

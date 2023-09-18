@@ -1,0 +1,86 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA/17.1/top/timer/src/simulation/modelsim
+v_1ms
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1694683388
+!i10b 1
+!s100 6@bd2Xg8jY8?`1cKBUH?30
+I8K_7HNOUdSSQP_hPD>G@o3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 _1ms_sv_unit
+S1
+R0
+w1686866713
+8C:/intelFPGA/17.1/top/timer/src/_1ms.sv
+FC:/intelFPGA/17.1/top/timer/src/_1ms.sv
+L0 3
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1694683388.000000
+!s107 C:/intelFPGA/17.1/top/timer/src/_1ms.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/intelFPGA/17.1/top/timer/src|C:/intelFPGA/17.1/top/timer/src/_1ms.sv|
+!i113 1
+Z6 o-sv -work work
+Z7 !s92 -sv -work work +incdir+C:/intelFPGA/17.1/top/timer/src
+Z8 tCvgOpt 0
+n@_1ms
+vdebouncing
+R1
+R2
+!i10b 1
+!s100 6@2MCaQZTZUZZY8OJbPFa2
+IkM5AGo1W6]1iP7^a:0UUi0
+R3
+!s105 debouncing_sv_unit
+S1
+R0
+w1694682908
+8C:/intelFPGA/17.1/top/timer/src/debouncing.sv
+FC:/intelFPGA/17.1/top/timer/src/debouncing.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/intelFPGA/17.1/top/timer/src/debouncing.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/intelFPGA/17.1/top/timer/src|C:/intelFPGA/17.1/top/timer/src/debouncing.sv|
+!i113 1
+R6
+R7
+R8
+vtransformer
+R1
+R2
+!i10b 1
+!s100 ]a:>hZe3hZbG?B?A9bW2L3
+ISGPFc5R53PP2[jkP<LAHc1
+R3
+!s105 transformer_sv_unit
+S1
+R0
+w1686397198
+8C:/intelFPGA/17.1/top/timer/src/transformer.sv
+FC:/intelFPGA/17.1/top/timer/src/transformer.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/intelFPGA/17.1/top/timer/src/transformer.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/intelFPGA/17.1/top/timer/src|C:/intelFPGA/17.1/top/timer/src/transformer.sv|
+!i113 1
+R6
+R7
+R8
