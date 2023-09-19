@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Thu Sep 14 12:41:52 2023
+Tue Sep 19 22:14:32 2023
 Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
 
 
@@ -10,8 +10,10 @@ Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
-  6. Analysis & Synthesis Suppressed Messages
+  5. Parameter Settings for User Entity Instance: seg7_control:seg7
+  6. Port Connectivity Checks: "main_cntrl:inter"
+  7. Analysis & Synthesis Messages
+  8. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -37,7 +39,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                           ;
 +-----------------------------+----------------------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Thu Sep 14 12:41:52 2023                        ;
+; Analysis & Synthesis Status ; Failed - Tue Sep 19 22:14:32 2023                        ;
 ; Quartus Prime Version       ; 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition ;
 ; Revision Name               ; top                                                      ;
 ; Top-level Entity Name       ; main                                                     ;
@@ -147,9 +149,38 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 4      ;
+; Number detected on machine ; 12     ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: seg7_control:seg7 ;
++----------------+---------+-------------------------------------+
+; Parameter Name ; Value   ; Type                                ;
++----------------+---------+-------------------------------------+
+; ZERO           ; 0000001 ; Unsigned Binary                     ;
+; ONE            ; 1001111 ; Unsigned Binary                     ;
+; TWO            ; 0010010 ; Unsigned Binary                     ;
+; THREE          ; 0000110 ; Unsigned Binary                     ;
+; FOUR           ; 1001100 ; Unsigned Binary                     ;
+; FIVE           ; 0100100 ; Unsigned Binary                     ;
+; SIX            ; 0100000 ; Unsigned Binary                     ;
+; SEVEN          ; 0001111 ; Unsigned Binary                     ;
+; EIGHT          ; 0000000 ; Unsigned Binary                     ;
+; NINE           ; 0000100 ; Unsigned Binary                     ;
++----------------+---------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "main_cntrl:inter"                                                                                                        ;
++-------------+---------+------------------+----------------------------------------------------------------------------------------------------------+
+; Port        ; Type    ; Severity         ; Details                                                                                                  ;
++-------------+---------+------------------+----------------------------------------------------------------------------------------------------------+
+; t_interval  ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity                                                   ;
+; time_t_flat ; Output  ; Warning          ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------------+---------+------------------+----------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -158,40 +189,81 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
-    Info: Processing started: Thu Sep 14 12:41:32 2023
+    Info: Processing started: Tue Sep 19 22:14:23 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
-Warning (12473): User specified to use only one processors but 2 processors were detected which could be used to decrease run time.
-Info (12021): Found 1 design units, including 1 entities, in source file main_cntrl.sv
-    Info (12023): Found entity 1: main_cntrl File: C:/intelFPGA/17.1/top/timer/src/main_cntrl.sv Line: 1
+Warning (12473): User specified to use only one processors but 12 processors were detected which could be used to decrease run time.
+Info (12021): Found 2 design units, including 1 entities, in source file main_cntrl.sv
+    Info (12022): Found design unit 1: time_pkg (SystemVerilog) File: A:/intelFPGA/proj/sec/src/time_pkg.sv Line: 4
+    Info (12023): Found entity 1: main_cntrl File: A:/intelFPGA/proj/sec/src/main_cntrl.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file debouncing.sv
-    Info (12023): Found entity 1: debouncing File: C:/intelFPGA/17.1/top/timer/src/debouncing.sv Line: 1
+    Info (12023): Found entity 1: debouncing File: A:/intelFPGA/proj/sec/src/debouncing.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file _1ms.sv
-    Info (12023): Found entity 1: _1ms File: C:/intelFPGA/17.1/top/timer/src/_1ms.sv Line: 3
+    Info (12023): Found entity 1: _1ms File: A:/intelFPGA/proj/sec/src/_1ms.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file transformer.sv
-    Info (12023): Found entity 1: transformer File: C:/intelFPGA/17.1/top/timer/src/transformer.sv Line: 1
-Error (10170): Verilog HDL syntax error at time_pkg.sv(34) near text: "[";  expecting "endfunction". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 34
-Error (10112): Ignored design unit "time_pkg" at time_pkg.sv(4) due to previous errors File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 4
+    Info (12023): Found entity 1: transformer File: A:/intelFPGA/proj/sec/src/transformer.sv Line: 1
 Info (12021): Found 0 design units, including 0 entities, in source file time_pkg.sv
 Info (12021): Found 1 design units, including 1 entities, in source file timer_ssms.sv
-    Info (12023): Found entity 1: timer_ssms File: C:/intelFPGA/17.1/top/timer/src/timer_ssms.sv Line: 1
+    Info (12023): Found entity 1: timer_ssms File: A:/intelFPGA/proj/sec/src/timer_ssms.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file seg7_control.sv
-    Info (12023): Found entity 1: seg7_control File: C:/intelFPGA/17.1/top/timer/src/seg7_control.sv Line: 3
-Error (10170): Verilog HDL syntax error at time_pkg.sv(34) near text: "[";  expecting "endfunction". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 34
-Error (10112): Ignored design unit "time_pkg" at time_pkg.sv(4) due to previous errors File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 4
-Error (10112): Ignored design unit "main" at main.sv(7) due to previous errors File: C:/intelFPGA/17.1/top/timer/src/main.sv Line: 7
-Info (12021): Found 0 design units, including 0 entities, in source file main.sv
+    Info (12023): Found entity 1: seg7_control File: A:/intelFPGA/proj/sec/src/seg7_control.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file main.sv
+    Info (12023): Found entity 1: main File: A:/intelFPGA/proj/sec/src/main.sv Line: 7
 Warning (12019): Can't analyze file -- file timer/tb/tb.sv is missing
-Info (144001): Generated suppressed messages file C:/intelFPGA/17.1/top/timer/src/output_files/top.map.smsg
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 5 errors, 2 warnings
-    Error: Peak virtual memory: 4771 megabytes
-    Error: Processing ended: Thu Sep 14 12:41:52 2023
-    Error: Elapsed time: 00:00:20
-    Error: Total CPU time (on all processors): 00:00:46
+Info (12021): Found 1 design units, including 1 entities, in source file /intelfpga/proj/sec/tb/tb.sv
+    Info (12023): Found entity 1: tb File: A:/intelFPGA/proj/sec/tb/tb.sv Line: 2
+Warning (10236): Verilog HDL Implicit Net warning at tb.sv(14): created implicit net for "LED_RED" File: A:/intelFPGA/proj/sec/tb/tb.sv Line: 14
+Info (12127): Elaborating entity "main" for the top level hierarchy
+Info (12128): Elaborating entity "debouncing" for hierarchy "debouncing:button" File: A:/intelFPGA/proj/sec/src/main.sv Line: 23
+Info (12128): Elaborating entity "_1ms" for hierarchy "_1ms:one_ms" File: A:/intelFPGA/proj/sec/src/main.sv Line: 25
+Warning (10230): Verilog HDL assignment warning at _1ms.sv(28): truncated value with size 32 to match size of target (26) File: A:/intelFPGA/proj/sec/src/_1ms.sv Line: 28
+Info (12128): Elaborating entity "timer_ssms" for hierarchy "timer_ssms:timer" File: A:/intelFPGA/proj/sec/src/main.sv Line: 27
+Info (12128): Elaborating entity "transformer" for hierarchy "transformer:megatron" File: A:/intelFPGA/proj/sec/src/main.sv Line: 30
+Warning (10230): Verilog HDL assignment warning at time_pkg.sv(36): truncated value with size 32 to match size of target (6) File: A:/intelFPGA/proj/sec/src/time_pkg.sv Line: 36
+Warning (10230): Verilog HDL assignment warning at transformer.sv(12): truncated value with size 6 to match size of target (4) File: A:/intelFPGA/proj/sec/src/transformer.sv Line: 12
+Warning (10230): Verilog HDL assignment warning at transformer.sv(13): truncated value with size 6 to match size of target (4) File: A:/intelFPGA/proj/sec/src/transformer.sv Line: 13
+Warning (10230): Verilog HDL assignment warning at transformer.sv(14): truncated value with size 6 to match size of target (4) File: A:/intelFPGA/proj/sec/src/transformer.sv Line: 14
+Warning (10230): Verilog HDL assignment warning at transformer.sv(15): truncated value with size 6 to match size of target (4) File: A:/intelFPGA/proj/sec/src/transformer.sv Line: 15
+Warning (10230): Verilog HDL assignment warning at transformer.sv(16): truncated value with size 6 to match size of target (4) File: A:/intelFPGA/proj/sec/src/transformer.sv Line: 16
+Warning (10230): Verilog HDL assignment warning at transformer.sv(17): truncated value with size 6 to match size of target (4) File: A:/intelFPGA/proj/sec/src/transformer.sv Line: 17
+Info (12128): Elaborating entity "seg7_control" for hierarchy "seg7_control:seg7" File: A:/intelFPGA/proj/sec/src/main.sv Line: 33
+Warning (10034): Output port "LED_RED[9]" at seg7_control.sv(14) has no driver File: A:/intelFPGA/proj/sec/src/seg7_control.sv Line: 14
+Warning (10034): Output port "LED_RED[5..0]" at seg7_control.sv(14) has no driver File: A:/intelFPGA/proj/sec/src/seg7_control.sv Line: 14
+Info (12128): Elaborating entity "main_cntrl" for hierarchy "main_cntrl:inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
+Warning (10036): Verilog HDL or VHDL warning at main_cntrl.sv(12): object "best_int" assigned a value but never read File: A:/intelFPGA/proj/sec/src/main_cntrl.sv Line: 12
+Warning (10034): Output port "time_t_flat" at main_cntrl.sv(9) has no driver File: A:/intelFPGA/proj/sec/src/main_cntrl.sv Line: 9
+Warning (12158): Entity "main_cntrl" contains only dangling pins File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
+Error (12002): Port "t_interval.t[0]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
+Error (12002): Port "t_interval.t[10]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
+Error (12002): Port "t_interval.t[11]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
+Error (12002): Port "t_interval.t[12]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
+Error (12002): Port "t_interval.t[13]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
+Error (12002): Port "t_interval.t[14]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
+Error (12002): Port "t_interval.t[15]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
+Error (12002): Port "t_interval.t[16]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
+Error (12002): Port "t_interval.t[17]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
+Error (12002): Port "t_interval.t[18]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
+Error (12002): Port "t_interval.t[19]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
+Error (12002): Port "t_interval.t[1]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
+Error (12002): Port "t_interval.t[2]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
+Error (12002): Port "t_interval.t[3]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
+Error (12002): Port "t_interval.t[4]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
+Error (12002): Port "t_interval.t[5]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
+Error (12002): Port "t_interval.t[6]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
+Error (12002): Port "t_interval.t[7]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
+Error (12002): Port "t_interval.t[8]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
+Error (12002): Port "t_interval.t[9]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (144001): Generated suppressed messages file A:/intelFPGA/proj/sec/src/output_files/top.map.smsg
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 20 errors, 17 warnings
+    Error: Peak virtual memory: 4775 megabytes
+    Error: Processing ended: Tue Sep 19 22:14:32 2023
+    Error: Elapsed time: 00:00:09
+    Error: Total CPU time (on all processors): 00:00:21
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/intelFPGA/17.1/top/timer/src/output_files/top.map.smsg.
+The suppressed messages can be found in A:/intelFPGA/proj/sec/src/output_files/top.map.smsg.
 
 

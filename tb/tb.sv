@@ -1,7 +1,6 @@
-`timescale 1 ps/ 1 ps
+`timescale 1ns / 1ps
 module tb();
 
-// test vector input registers
 logic clk;
 logic KEY0;
 logic KEY1;
@@ -12,56 +11,24 @@ logic [6:0]  HEX1;
 logic [6:0]  HEX2;
 logic [6:0]  HEX3;
 
-// assign statements (if any)                          
-main testbench(
-// port map - connection between master ports and signals/registers   
-        .clk(clk),
-        .KEY0(KEY0),
-        .KEY1(KEY1),
-        .KEY2(KEY2),
-		  .HEX0(HEX0),
-		  .HEX1(HEX1),
-		  .HEX2(HEX2),
-		  .HEX3(HEX3),
-		  
-);
+main tb( .clk(clk), .KEY0(KEY0), .KEY1(KEY1), .KEY2(KEY2), .LED_RED(LED_RED), .HEX0(HEX0), .HEX1(HEX1), .HEX2(HEX2), .HEX3(HEX3));
 
-initial                                                
-begin        
-  clk = 0;                                          
-  KEY0 = 0;
-  KEY1 = 0; 
-  KEY2 = 0;  
-                    
-  # 10;
-  KEY0 = 1;
-  KEY1 = 0; 
-  KEY2 = 0;  
-               
-  # 15;
-  KEY0 = 0;
-  KEY1 = 1; 
-  KEY2 = 0;  
-              
-  # 20;
-  KEY0 = 0;
-  KEY1 = 1; 
-  KEY2 = 0;  
-                
-  # 100;
-  KEY0 = 1;
-  KEY1 = 0; 
-  KEY2 = 0;  
-                      
-  # 10;
-  KEY0 = 0;
-  KEY1 = 0; 
-  KEY2 = 1;  
-  $display("Running testbench");                       
-  # 10;
-end                                                    
+
+initial 
+
+begin
+
+clk = 1'b0;
+KEY0 = 1'b0;
+
+#50;
+
+KEY1 = 1'b1;
+
+
+end
 
 always 
-  #5  clk =  ! clk;    //создание clk                                                
- 
-endmodule
+  #5  clk =  ! clk; 
+  
+endmodule 

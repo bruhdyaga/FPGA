@@ -8,7 +8,7 @@ package time_pkg;
 	} time_t;
 	
 	function time_t time_delta(time_t t2, time_t t1); // res is (t2-t1), t2 >= t1
-		time_t res;
+		automatic time_t res;
 		
 		begin
 		res = t2 - t1;
@@ -18,7 +18,7 @@ package time_pkg;
 	endfunction
 	
 	function logic is_best_interval(time_t t_new, time_t t_old);
-		logic res = '0;
+		automatic logic res = '0;
 		
 		if (t_new > t_old) begin
 			res = '0;
@@ -31,7 +31,7 @@ package time_pkg;
 	endfunction
 	
 	function logic [5:0] transform([19:0] t, int digit);
-		logic [5:0] res = 0;
+		automatic logic [5:0] res = 0;
 		begin
 			res = ((t % digit)/(digit/4'd10));
 		end

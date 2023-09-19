@@ -7,80 +7,129 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/intelFPGA/17.1/top/timer/sim
+Z0 dA:/intelFPGA/proj/sec/sim
 v_1ms
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1694683852
+Z2 !s110 1695149639
 !i10b 1
 !s100 6@bd2Xg8jY8?`1cKBUH?30
-I8K_7HNOUdSSQP_hPD>G@o3
+I15nkHdNRRWU4TV?S:ajdk0
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 !s105 _1ms_sv_unit
 S1
 R0
-w1686866713
-8C:/intelFPGA/17.1/top/timer/src/_1ms.sv
-FC:/intelFPGA/17.1/top/timer/src/_1ms.sv
+Z4 w1695062198
+8A:/intelFPGA/proj/sec/src/_1ms.sv
+FA:/intelFPGA/proj/sec/src/_1ms.sv
 L0 3
-Z4 OV;L;10.5b;63
+Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1694683852.000000
-!s107 C:/intelFPGA/17.1/top/timer/src/_1ms.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/intelFPGA/17.1/top/timer/src|C:/intelFPGA/17.1/top/timer/src/_1ms.sv|
+Z6 !s108 1695149639.000000
+!s107 A:/intelFPGA/proj/sec/src/_1ms.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+A:/intelFPGA/proj/sec/src|A:/intelFPGA/proj/sec/src/_1ms.sv|
 !i113 1
-Z6 o-sv -work work
-Z7 !s92 -sv -work work +incdir+C:/intelFPGA/17.1/top/timer/src
-Z8 tCvgOpt 0
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+A:/intelFPGA/proj/sec/src
+Z9 tCvgOpt 0
 n@_1ms
 vdebouncing
 R1
 R2
 !i10b 1
 !s100 6@2MCaQZTZUZZY8OJbPFa2
-IkM5AGo1W6]1iP7^a:0UUi0
+ISY<ZDl3z9k_Z7De;BUfgS0
 R3
 !s105 debouncing_sv_unit
 S1
 R0
-w1694682908
-8C:/intelFPGA/17.1/top/timer/src/debouncing.sv
-FC:/intelFPGA/17.1/top/timer/src/debouncing.sv
-L0 1
 R4
+8A:/intelFPGA/proj/sec/src/debouncing.sv
+FA:/intelFPGA/proj/sec/src/debouncing.sv
+L0 1
+R5
 r1
 !s85 0
 31
-R5
-!s107 C:/intelFPGA/17.1/top/timer/src/debouncing.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/intelFPGA/17.1/top/timer/src|C:/intelFPGA/17.1/top/timer/src/debouncing.sv|
-!i113 1
 R6
+!s107 A:/intelFPGA/proj/sec/src/debouncing.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+A:/intelFPGA/proj/sec/src|A:/intelFPGA/proj/sec/src/debouncing.sv|
+!i113 1
 R7
 R8
+R9
+vseg7_control
+R1
+R2
+!i10b 1
+!s100 <DhW>6lN1UZFlJlz`^L2m0
+IS9FgNfNZ0m`GUKo[zZRNQ1
+R3
+!s105 seg7_control_sv_unit
+S1
+R0
+w1695141688
+8A:/intelFPGA/proj/sec/src/seg7_control.sv
+FA:/intelFPGA/proj/sec/src/seg7_control.sv
+L0 3
+R5
+r1
+!s85 0
+31
+R6
+!s107 A:/intelFPGA/proj/sec/src/seg7_control.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+A:/intelFPGA/proj/sec/src|A:/intelFPGA/proj/sec/src/seg7_control.sv|
+!i113 1
+R7
+R8
+R9
+Xtime_pkg
+R1
+R2
+!i10b 1
+!s100 zEBMR5RBzkRO7aD_>E=Lg0
+IZ4iDkC9WG=8kJ8GK<z3]C2
+VZ4iDkC9WG=8kJ8GK<z3]C2
+S1
+R0
+w1695141305
+8A:/intelFPGA/proj/sec/src/time_pkg.sv
+FA:/intelFPGA/proj/sec/src/time_pkg.sv
+L0 4
+R5
+r1
+!s85 0
+31
+R6
+!s107 A:/intelFPGA/proj/sec/src/time_pkg.sv|A:/intelFPGA/proj/sec/src/main_cntrl.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+A:/intelFPGA/proj/sec/src|A:/intelFPGA/proj/sec/src/main_cntrl.sv|
+!i113 1
+R7
+R8
+R9
 vtransformer
 R1
-!s110 1694683853
+R2
 !i10b 1
 !s100 ]a:>hZe3hZbG?B?A9bW2L3
-ISGPFc5R53PP2[jkP<LAHc1
+IN7=V<KJ1zUm<?Z7edbMf]3
 R3
 !s105 transformer_sv_unit
 S1
 R0
-w1686397198
-8C:/intelFPGA/17.1/top/timer/src/transformer.sv
-FC:/intelFPGA/17.1/top/timer/src/transformer.sv
-L0 1
 R4
+8A:/intelFPGA/proj/sec/src/transformer.sv
+FA:/intelFPGA/proj/sec/src/transformer.sv
+L0 1
+R5
 r1
 !s85 0
 31
-R5
-!s107 C:/intelFPGA/17.1/top/timer/src/transformer.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/intelFPGA/17.1/top/timer/src|C:/intelFPGA/17.1/top/timer/src/transformer.sv|
-!i113 1
 R6
+!s107 A:/intelFPGA/proj/sec/src/transformer.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+A:/intelFPGA/proj/sec/src|A:/intelFPGA/proj/sec/src/transformer.sv|
+!i113 1
 R7
 R8
+R9

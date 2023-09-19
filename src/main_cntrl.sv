@@ -1,12 +1,14 @@
+`include "time_pkg.sv"
 module main_cntrl(
 	input clk, KEY2,
 	
 	input key0, key_interval,
 	
 	input [19:0] t,
-	output time_t t_interval
+	output [$bits(time_t)-1:0] time_t_flat
 );
-	
+	time_t t_interval;
+	assign t_interval =time_t_flat;
 	time_t t_old = '0, t_delta, best_int;
 	logic is_registred = '0;
 

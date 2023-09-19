@@ -11,7 +11,7 @@ module seg7_control(
     input [3:0] thousands,
     input [3:0] ten_thousands,
     input [3:0] hun_thousands,
-	 output [9:0] LED_RED,
+	 output logic [9:0] LED_RED,
     output logic [0:6] HEX0,  
     output logic [0:6] HEX1,
     output logic [0:6] HEX2,
