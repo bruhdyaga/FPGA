@@ -1,14 +1,11 @@
 `ifndef time_pkg
 `define time_pkg
 
-package time_pkg;
+package  time_pkg;
 
-	typedef struct packed {
-		logic[19:0] t;
-	} time_t;
-	
-	function time_t time_delta(time_t t2, time_t t1); // res is (t2-t1), t2 >= t1
-		automatic time_t res;
+
+	function logic[19:0]  time_delta(logic[19:0]  t2, logic[19:0]  t1); // res is (t2-t1), t2 >= t1
+		logic[19:0]  res;
 		
 		begin
 		res = t2 - t1;
@@ -17,7 +14,7 @@ package time_pkg;
 		return res;
 	endfunction
 	
-	function logic is_best_interval(time_t t_new, time_t t_old);
+	function logic is_best_interval(logic[19:0]  t_new, logic[19:0]  t_old);
 		automatic logic res = '0;
 		
 		if (t_new > t_old) begin

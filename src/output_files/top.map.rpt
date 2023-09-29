@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Tue Sep 19 22:14:32 2023
+Tue Sep 26 12:09:33 2023
 Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
 
 
@@ -10,10 +10,27 @@ Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Parameter Settings for User Entity Instance: seg7_control:seg7
-  6. Port Connectivity Checks: "main_cntrl:inter"
-  7. Analysis & Synthesis Messages
-  8. Analysis & Synthesis Suppressed Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: seg7_control:seg7
+ 11. Parameter Settings for Inferred Entity Instance: transformer:megatron|lpm_divide:Mod0
+ 12. Parameter Settings for Inferred Entity Instance: transformer:megatron|lpm_divide:Mod1
+ 13. Parameter Settings for Inferred Entity Instance: transformer:megatron|lpm_divide:Div0
+ 14. Parameter Settings for Inferred Entity Instance: transformer:megatron|lpm_divide:Mod2
+ 15. Parameter Settings for Inferred Entity Instance: transformer:megatron|lpm_divide:Div1
+ 16. Parameter Settings for Inferred Entity Instance: transformer:megatron|lpm_divide:Mod3
+ 17. Parameter Settings for Inferred Entity Instance: transformer:megatron|lpm_divide:Div2
+ 18. Parameter Settings for Inferred Entity Instance: transformer:megatron|lpm_divide:Mod4
+ 19. Parameter Settings for Inferred Entity Instance: transformer:megatron|lpm_divide:Div3
+ 20. Parameter Settings for Inferred Entity Instance: transformer:megatron|lpm_divide:Mod5
+ 21. Parameter Settings for Inferred Entity Instance: transformer:megatron|lpm_divide:Div4
+ 22. Post-Synthesis Netlist Statistics for Top Partition
+ 23. Elapsed Time Per Partition
+ 24. Analysis & Synthesis Messages
+ 25. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -36,22 +53,27 @@ refer to the applicable agreement for further details.
 
 
 
-+----------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                           ;
-+-----------------------------+----------------------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Tue Sep 19 22:14:32 2023                        ;
-; Quartus Prime Version       ; 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition ;
-; Revision Name               ; top                                                      ;
-; Top-level Entity Name       ; main                                                     ;
-; Family                      ; Cyclone V                                                ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                                ;
-; Total registers             ; N/A until Partition Merge                                ;
-; Total pins                  ; N/A until Partition Merge                                ;
-; Total virtual pins          ; N/A until Partition Merge                                ;
-; Total block memory bits     ; N/A until Partition Merge                                ;
-; Total PLLs                  ; N/A until Partition Merge                                ;
-; Total DLLs                  ; N/A until Partition Merge                                ;
-+-----------------------------+----------------------------------------------------------+
++--------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                               ;
++---------------------------------+----------------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue Sep 26 12:09:33 2023                    ;
+; Quartus Prime Version           ; 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition ;
+; Revision Name                   ; top                                                      ;
+; Top-level Entity Name           ; main                                                     ;
+; Family                          ; Cyclone V                                                ;
+; Logic utilization (in ALMs)     ; N/A                                                      ;
+; Total registers                 ; 187                                                      ;
+; Total pins                      ; 42                                                       ;
+; Total virtual pins              ; 0                                                        ;
+; Total block memory bits         ; 0                                                        ;
+; Total DSP Blocks                ; 0                                                        ;
+; Total HSSI RX PCSs              ; 0                                                        ;
+; Total HSSI PMA RX Deserializers ; 0                                                        ;
+; Total HSSI TX PCSs              ; 0                                                        ;
+; Total HSSI PMA TX Serializers   ; 0                                                        ;
+; Total PLLs                      ; 0                                                        ;
+; Total DLLs                      ; 0                                                        ;
++---------------------------------+----------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -149,9 +171,175 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 12     ;
+; Number detected on machine ; 4      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                              ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                          ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
+; main_cntrl.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/intelFPGA/17.1/top/timer/src/main_cntrl.sv                         ;         ;
+; debouncing.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/intelFPGA/17.1/top/timer/src/debouncing.sv                         ;         ;
+; _1ms.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/intelFPGA/17.1/top/timer/src/_1ms.sv                               ;         ;
+; transformer.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/intelFPGA/17.1/top/timer/src/transformer.sv                        ;         ;
+; time_pkg.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/intelFPGA/17.1/top/timer/src/time_pkg.sv                           ;         ;
+; timer_ssms.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/intelFPGA/17.1/top/timer/src/timer_ssms.sv                         ;         ;
+; seg7_control.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/intelFPGA/17.1/top/timer/src/seg7_control.sv                       ;         ;
+; main.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/intelFPGA/17.1/top/timer/src/main.sv                               ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga/17.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga/17.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga/17.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal171.inc                   ; yes             ; Megafunction                 ; c:/intelfpga/17.1/quartus/libraries/megafunctions/aglobal171.inc      ;         ;
+; db/lpm_divide_i3m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA/17.1/top/timer/src/db/lpm_divide_i3m.tdf                 ;         ;
+; db/sign_div_unsign_llh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA/17.1/top/timer/src/db/sign_div_unsign_llh.tdf            ;         ;
+; db/alt_u_div_gve.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA/17.1/top/timer/src/db/alt_u_div_gve.tdf                  ;         ;
+; db/lpm_divide_l3m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA/17.1/top/timer/src/db/lpm_divide_l3m.tdf                 ;         ;
+; db/sign_div_unsign_olh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA/17.1/top/timer/src/db/sign_div_unsign_olh.tdf            ;         ;
+; db/alt_u_div_mve.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA/17.1/top/timer/src/db/alt_u_div_mve.tdf                  ;         ;
+; db/lpm_divide_4am.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA/17.1/top/timer/src/db/lpm_divide_4am.tdf                 ;         ;
+; db/sign_div_unsign_akh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA/17.1/top/timer/src/db/sign_div_unsign_akh.tdf            ;         ;
+; db/alt_u_div_qse.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA/17.1/top/timer/src/db/alt_u_div_qse.tdf                  ;         ;
+; db/lpm_divide_v4m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA/17.1/top/timer/src/db/lpm_divide_v4m.tdf                 ;         ;
+; db/sign_div_unsign_2nh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA/17.1/top/timer/src/db/sign_div_unsign_2nh.tdf            ;         ;
+; db/alt_u_div_a2f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA/17.1/top/timer/src/db/alt_u_div_a2f.tdf                  ;         ;
+; db/lpm_divide_hbm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA/17.1/top/timer/src/db/lpm_divide_hbm.tdf                 ;         ;
+; db/sign_div_unsign_nlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA/17.1/top/timer/src/db/sign_div_unsign_nlh.tdf            ;         ;
+; db/alt_u_div_kve.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA/17.1/top/timer/src/db/alt_u_div_kve.tdf                  ;         ;
+; db/lpm_divide_35m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA/17.1/top/timer/src/db/lpm_divide_35m.tdf                 ;         ;
+; db/sign_div_unsign_6nh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA/17.1/top/timer/src/db/sign_div_unsign_6nh.tdf            ;         ;
+; db/alt_u_div_i2f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA/17.1/top/timer/src/db/alt_u_div_i2f.tdf                  ;         ;
+; db/lpm_divide_vcm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA/17.1/top/timer/src/db/lpm_divide_vcm.tdf                 ;         ;
+; db/sign_div_unsign_5nh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA/17.1/top/timer/src/db/sign_div_unsign_5nh.tdf            ;         ;
+; db/alt_u_div_g2f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA/17.1/top/timer/src/db/alt_u_div_g2f.tdf                  ;         ;
+; db/lpm_divide_65m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA/17.1/top/timer/src/db/lpm_divide_65m.tdf                 ;         ;
+; db/sign_div_unsign_9nh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA/17.1/top/timer/src/db/sign_div_unsign_9nh.tdf            ;         ;
+; db/alt_u_div_o2f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA/17.1/top/timer/src/db/alt_u_div_o2f.tdf                  ;         ;
+; db/lpm_divide_6dm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA/17.1/top/timer/src/db/lpm_divide_6dm.tdf                 ;         ;
+; db/sign_div_unsign_cnh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA/17.1/top/timer/src/db/sign_div_unsign_cnh.tdf            ;         ;
+; db/alt_u_div_u2f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA/17.1/top/timer/src/db/alt_u_div_u2f.tdf                  ;         ;
+; db/lpm_divide_05m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA/17.1/top/timer/src/db/lpm_divide_05m.tdf                 ;         ;
+; db/sign_div_unsign_3nh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA/17.1/top/timer/src/db/sign_div_unsign_3nh.tdf            ;         ;
+; db/alt_u_div_c2f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA/17.1/top/timer/src/db/alt_u_div_c2f.tdf                  ;         ;
+; db/lpm_divide_3dm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/intelFPGA/17.1/top/timer/src/db/lpm_divide_3dm.tdf                 ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimate of Logic utilization (ALMs needed) ; 994        ;
+;                                             ;            ;
+; Combinational ALUT usage for logic          ; 1927       ;
+;     -- 7 input functions                    ; 3          ;
+;     -- 6 input functions                    ; 34         ;
+;     -- 5 input functions                    ; 100        ;
+;     -- 4 input functions                    ; 356        ;
+;     -- <=3 input functions                  ; 1434       ;
+;                                             ;            ;
+; Dedicated logic registers                   ; 187        ;
+;                                             ;            ;
+; I/O pins                                    ; 42         ;
+;                                             ;            ;
+; Total DSP Blocks                            ; 0          ;
+;                                             ;            ;
+; Maximum fan-out node                        ; KEY2~input ;
+; Maximum fan-out                             ; 149        ;
+; Total fan-out                               ; 6715       ;
+; Average fan-out                             ; 3.06       ;
++---------------------------------------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                  ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                        ; Entity Name         ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |main                                     ; 1927 (0)            ; 187 (0)                   ; 0                 ; 0          ; 42   ; 0            ; |main                                                                                                                      ; main                ; work         ;
+;    |_1ms:one_ms|                          ; 33 (33)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |main|_1ms:one_ms                                                                                                          ; _1ms                ; work         ;
+;    |debouncing:button|                    ; 4 (4)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |main|debouncing:button                                                                                                    ; debouncing          ; work         ;
+;    |main_cntrl:inter|                     ; 36 (36)             ; 41 (41)                   ; 0                 ; 0          ; 0    ; 0            ; |main|main_cntrl:inter                                                                                                     ; main_cntrl          ; work         ;
+;    |seg7_control:seg7|                    ; 77 (77)             ; 47 (47)                   ; 0                 ; 0          ; 0    ; 0            ; |main|seg7_control:seg7                                                                                                    ; seg7_control        ; work         ;
+;    |timer_ssms:timer|                     ; 80 (80)             ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |main|timer_ssms:timer                                                                                                     ; timer_ssms          ; work         ;
+;    |transformer:megatron|                 ; 1697 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron                                                                                                 ; transformer         ; work         ;
+;       |lpm_divide:Div0|                   ; 36 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_4am:auto_generated|  ; 36 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Div0|lpm_divide_4am:auto_generated                                                   ; lpm_divide_4am      ; work         ;
+;             |sign_div_unsign_akh:divider| ; 36 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Div0|lpm_divide_4am:auto_generated|sign_div_unsign_akh:divider                       ; sign_div_unsign_akh ; work         ;
+;                |alt_u_div_qse:divider|    ; 36 (36)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Div0|lpm_divide_4am:auto_generated|sign_div_unsign_akh:divider|alt_u_div_qse:divider ; alt_u_div_qse       ; work         ;
+;       |lpm_divide:Div1|                   ; 59 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Div1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_hbm:auto_generated|  ; 59 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Div1|lpm_divide_hbm:auto_generated                                                   ; lpm_divide_hbm      ; work         ;
+;             |sign_div_unsign_nlh:divider| ; 59 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Div1|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh ; work         ;
+;                |alt_u_div_kve:divider|    ; 59 (59)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Div1|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider ; alt_u_div_kve       ; work         ;
+;       |lpm_divide:Div2|                   ; 107 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Div2                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_vcm:auto_generated|  ; 107 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Div2|lpm_divide_vcm:auto_generated                                                   ; lpm_divide_vcm      ; work         ;
+;             |sign_div_unsign_5nh:divider| ; 107 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Div2|lpm_divide_vcm:auto_generated|sign_div_unsign_5nh:divider                       ; sign_div_unsign_5nh ; work         ;
+;                |alt_u_div_g2f:divider|    ; 107 (107)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Div2|lpm_divide_vcm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_g2f:divider ; alt_u_div_g2f       ; work         ;
+;       |lpm_divide:Div3|                   ; 111 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Div3                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_6dm:auto_generated|  ; 111 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Div3|lpm_divide_6dm:auto_generated                                                   ; lpm_divide_6dm      ; work         ;
+;             |sign_div_unsign_cnh:divider| ; 111 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Div3|lpm_divide_6dm:auto_generated|sign_div_unsign_cnh:divider                       ; sign_div_unsign_cnh ; work         ;
+;                |alt_u_div_u2f:divider|    ; 111 (111)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Div3|lpm_divide_6dm:auto_generated|sign_div_unsign_cnh:divider|alt_u_div_u2f:divider ; alt_u_div_u2f       ; work         ;
+;       |lpm_divide:Div4|                   ; 134 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Div4                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_3dm:auto_generated|  ; 134 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Div4|lpm_divide_3dm:auto_generated                                                   ; lpm_divide_3dm      ; work         ;
+;             |sign_div_unsign_9nh:divider| ; 134 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Div4|lpm_divide_3dm:auto_generated|sign_div_unsign_9nh:divider                       ; sign_div_unsign_9nh ; work         ;
+;                |alt_u_div_o2f:divider|    ; 134 (134)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Div4|lpm_divide_3dm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_o2f:divider ; alt_u_div_o2f       ; work         ;
+;       |lpm_divide:Mod0|                   ; 181 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_i3m:auto_generated|  ; 181 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Mod0|lpm_divide_i3m:auto_generated                                                   ; lpm_divide_i3m      ; work         ;
+;             |sign_div_unsign_llh:divider| ; 181 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Mod0|lpm_divide_i3m:auto_generated|sign_div_unsign_llh:divider                       ; sign_div_unsign_llh ; work         ;
+;                |alt_u_div_gve:divider|    ; 181 (181)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Mod0|lpm_divide_i3m:auto_generated|sign_div_unsign_llh:divider|alt_u_div_gve:divider ; alt_u_div_gve       ; work         ;
+;       |lpm_divide:Mod1|                   ; 269 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Mod1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_l3m:auto_generated|  ; 269 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Mod1|lpm_divide_l3m:auto_generated                                                   ; lpm_divide_l3m      ; work         ;
+;             |sign_div_unsign_olh:divider| ; 269 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Mod1|lpm_divide_l3m:auto_generated|sign_div_unsign_olh:divider                       ; sign_div_unsign_olh ; work         ;
+;                |alt_u_div_mve:divider|    ; 269 (269)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Mod1|lpm_divide_l3m:auto_generated|sign_div_unsign_olh:divider|alt_u_div_mve:divider ; alt_u_div_mve       ; work         ;
+;       |lpm_divide:Mod2|                   ; 295 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Mod2                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_v4m:auto_generated|  ; 295 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Mod2|lpm_divide_v4m:auto_generated                                                   ; lpm_divide_v4m      ; work         ;
+;             |sign_div_unsign_2nh:divider| ; 295 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Mod2|lpm_divide_v4m:auto_generated|sign_div_unsign_2nh:divider                       ; sign_div_unsign_2nh ; work         ;
+;                |alt_u_div_a2f:divider|    ; 295 (295)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Mod2|lpm_divide_v4m:auto_generated|sign_div_unsign_2nh:divider|alt_u_div_a2f:divider ; alt_u_div_a2f       ; work         ;
+;       |lpm_divide:Mod3|                   ; 264 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Mod3                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_35m:auto_generated|  ; 264 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Mod3|lpm_divide_35m:auto_generated                                                   ; lpm_divide_35m      ; work         ;
+;             |sign_div_unsign_6nh:divider| ; 264 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Mod3|lpm_divide_35m:auto_generated|sign_div_unsign_6nh:divider                       ; sign_div_unsign_6nh ; work         ;
+;                |alt_u_div_i2f:divider|    ; 264 (264)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Mod3|lpm_divide_35m:auto_generated|sign_div_unsign_6nh:divider|alt_u_div_i2f:divider ; alt_u_div_i2f       ; work         ;
+;       |lpm_divide:Mod4|                   ; 184 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Mod4                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_65m:auto_generated|  ; 184 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Mod4|lpm_divide_65m:auto_generated                                                   ; lpm_divide_65m      ; work         ;
+;             |sign_div_unsign_9nh:divider| ; 184 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Mod4|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider                       ; sign_div_unsign_9nh ; work         ;
+;                |alt_u_div_o2f:divider|    ; 184 (184)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Mod4|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_o2f:divider ; alt_u_div_o2f       ; work         ;
+;       |lpm_divide:Mod5|                   ; 57 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Mod5                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_05m:auto_generated|  ; 57 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Mod5|lpm_divide_05m:auto_generated                                                   ; lpm_divide_05m      ; work         ;
+;             |sign_div_unsign_3nh:divider| ; 57 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Mod5|lpm_divide_05m:auto_generated|sign_div_unsign_3nh:divider                       ; sign_div_unsign_3nh ; work         ;
+;                |alt_u_div_c2f:divider|    ; 57 (57)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |main|transformer:megatron|lpm_divide:Mod5|lpm_divide_05m:auto_generated|sign_div_unsign_3nh:divider|alt_u_div_c2f:divider ; alt_u_div_c2f       ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 187   ;
+; Number of registers using Synchronous Clear  ; 66    ;
+; Number of registers using Synchronous Load   ; 20    ;
+; Number of registers using Asynchronous Clear ; 117   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 151   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; 3:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |main|_1ms:one_ms|ctr_reg[20]          ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 0 LEs                ; 38 LEs                 ; Yes        ; |main|main_cntrl:inter|t_interval[5]   ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |main|seg7_control:seg7|range_three[2] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |main|seg7_control:seg7|LED_RED[8]     ;
+; 6:1                ; 20 bits   ; 80 LEs        ; 40 LEs               ; 40 LEs                 ; Yes        ; |main|timer_ssms:timer|t[2]            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
 
 
 +----------------------------------------------------------------+
@@ -173,14 +361,307 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "main_cntrl:inter"                                                                                                        ;
-+-------------+---------+------------------+----------------------------------------------------------------------------------------------------------+
-; Port        ; Type    ; Severity         ; Details                                                                                                  ;
-+-------------+---------+------------------+----------------------------------------------------------------------------------------------------------+
-; t_interval  ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity                                                   ;
-; time_t_flat ; Output  ; Warning          ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+-------------+---------+------------------+----------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: transformer:megatron|lpm_divide:Mod0 ;
++------------------------+----------------+---------------------------------------------+
+; Parameter Name         ; Value          ; Type                                        ;
++------------------------+----------------+---------------------------------------------+
+; LPM_WIDTHN             ; 20             ; Untyped                                     ;
+; LPM_WIDTHD             ; 4              ; Untyped                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                     ;
+; CBXI_PARAMETER         ; lpm_divide_i3m ; Untyped                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                              ;
++------------------------+----------------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: transformer:megatron|lpm_divide:Mod1 ;
++------------------------+----------------+---------------------------------------------+
+; Parameter Name         ; Value          ; Type                                        ;
++------------------------+----------------+---------------------------------------------+
+; LPM_WIDTHN             ; 20             ; Untyped                                     ;
+; LPM_WIDTHD             ; 7              ; Untyped                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                     ;
+; CBXI_PARAMETER         ; lpm_divide_l3m ; Untyped                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                              ;
++------------------------+----------------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: transformer:megatron|lpm_divide:Div0 ;
++------------------------+----------------+---------------------------------------------+
+; Parameter Name         ; Value          ; Type                                        ;
++------------------------+----------------+---------------------------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                                     ;
+; LPM_WIDTHD             ; 4              ; Untyped                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                     ;
+; CBXI_PARAMETER         ; lpm_divide_4am ; Untyped                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                              ;
++------------------------+----------------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: transformer:megatron|lpm_divide:Mod2 ;
++------------------------+----------------+---------------------------------------------+
+; Parameter Name         ; Value          ; Type                                        ;
++------------------------+----------------+---------------------------------------------+
+; LPM_WIDTHN             ; 20             ; Untyped                                     ;
+; LPM_WIDTHD             ; 10             ; Untyped                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                     ;
+; CBXI_PARAMETER         ; lpm_divide_v4m ; Untyped                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                              ;
++------------------------+----------------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: transformer:megatron|lpm_divide:Div1 ;
++------------------------+----------------+---------------------------------------------+
+; Parameter Name         ; Value          ; Type                                        ;
++------------------------+----------------+---------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                     ;
+; LPM_WIDTHD             ; 7              ; Untyped                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                     ;
+; CBXI_PARAMETER         ; lpm_divide_hbm ; Untyped                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                              ;
++------------------------+----------------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: transformer:megatron|lpm_divide:Mod3 ;
++------------------------+----------------+---------------------------------------------+
+; Parameter Name         ; Value          ; Type                                        ;
++------------------------+----------------+---------------------------------------------+
+; LPM_WIDTHN             ; 20             ; Untyped                                     ;
+; LPM_WIDTHD             ; 14             ; Untyped                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                     ;
+; CBXI_PARAMETER         ; lpm_divide_35m ; Untyped                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                              ;
++------------------------+----------------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: transformer:megatron|lpm_divide:Div2 ;
++------------------------+----------------+---------------------------------------------+
+; Parameter Name         ; Value          ; Type                                        ;
++------------------------+----------------+---------------------------------------------+
+; LPM_WIDTHN             ; 14             ; Untyped                                     ;
+; LPM_WIDTHD             ; 10             ; Untyped                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                     ;
+; CBXI_PARAMETER         ; lpm_divide_vcm ; Untyped                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                              ;
++------------------------+----------------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: transformer:megatron|lpm_divide:Mod4 ;
++------------------------+----------------+---------------------------------------------+
+; Parameter Name         ; Value          ; Type                                        ;
++------------------------+----------------+---------------------------------------------+
+; LPM_WIDTHN             ; 20             ; Untyped                                     ;
+; LPM_WIDTHD             ; 17             ; Untyped                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                     ;
+; CBXI_PARAMETER         ; lpm_divide_65m ; Untyped                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                              ;
++------------------------+----------------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: transformer:megatron|lpm_divide:Div3 ;
++------------------------+----------------+---------------------------------------------+
+; Parameter Name         ; Value          ; Type                                        ;
++------------------------+----------------+---------------------------------------------+
+; LPM_WIDTHN             ; 17             ; Untyped                                     ;
+; LPM_WIDTHD             ; 14             ; Untyped                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                     ;
+; CBXI_PARAMETER         ; lpm_divide_6dm ; Untyped                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                              ;
++------------------------+----------------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: transformer:megatron|lpm_divide:Mod5 ;
++------------------------+----------------+---------------------------------------------+
+; Parameter Name         ; Value          ; Type                                        ;
++------------------------+----------------+---------------------------------------------+
+; LPM_WIDTHN             ; 20             ; Untyped                                     ;
+; LPM_WIDTHD             ; 20             ; Untyped                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                     ;
+; CBXI_PARAMETER         ; lpm_divide_05m ; Untyped                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                              ;
++------------------------+----------------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: transformer:megatron|lpm_divide:Div4 ;
++------------------------+----------------+---------------------------------------------+
+; Parameter Name         ; Value          ; Type                                        ;
++------------------------+----------------+---------------------------------------------+
+; LPM_WIDTHN             ; 20             ; Untyped                                     ;
+; LPM_WIDTHD             ; 17             ; Untyped                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                     ;
+; CBXI_PARAMETER         ; lpm_divide_3dm ; Untyped                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                              ;
++------------------------+----------------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 187                         ;
+;     CLR               ; 10                          ;
+;     CLR SCLR          ; 26                          ;
+;     ENA               ; 50                          ;
+;     ENA CLR           ; 41                          ;
+;     ENA CLR SCLR      ; 20                          ;
+;     ENA CLR SLD       ; 20                          ;
+;     ENA SCLR          ; 20                          ;
+; arriav_lcell_comb     ; 1928                        ;
+;     arith             ; 876                         ;
+;         0 data inputs ; 138                         ;
+;         1 data inputs ; 139                         ;
+;         2 data inputs ; 33                          ;
+;         3 data inputs ; 317                         ;
+;         4 data inputs ; 249                         ;
+;     extend            ; 3                           ;
+;         7 data inputs ; 3                           ;
+;     normal            ; 951                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 538                         ;
+;         3 data inputs ; 168                         ;
+;         4 data inputs ; 107                         ;
+;         5 data inputs ; 100                         ;
+;         6 data inputs ; 34                          ;
+;     shared            ; 98                          ;
+;         0 data inputs ; 6                           ;
+;         1 data inputs ; 72                          ;
+;         2 data inputs ; 20                          ;
+; boundary_port         ; 42                          ;
+;                       ;                             ;
+; Max LUT depth         ; 32.30                       ;
+; Average LUT depth     ; 22.16                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:06     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -189,81 +670,209 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
-    Info: Processing started: Tue Sep 19 22:14:23 2023
+    Info: Processing started: Tue Sep 26 12:09:07 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
-Warning (12473): User specified to use only one processors but 12 processors were detected which could be used to decrease run time.
+Warning (12473): User specified to use only one processors but 2 processors were detected which could be used to decrease run time.
 Info (12021): Found 2 design units, including 1 entities, in source file main_cntrl.sv
-    Info (12022): Found design unit 1: time_pkg (SystemVerilog) File: A:/intelFPGA/proj/sec/src/time_pkg.sv Line: 4
-    Info (12023): Found entity 1: main_cntrl File: A:/intelFPGA/proj/sec/src/main_cntrl.sv Line: 2
+    Info (12022): Found design unit 1: time_pkg (SystemVerilog) File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 4
+    Info (12023): Found entity 1: main_cntrl File: C:/intelFPGA/17.1/top/timer/src/main_cntrl.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file debouncing.sv
-    Info (12023): Found entity 1: debouncing File: A:/intelFPGA/proj/sec/src/debouncing.sv Line: 1
+    Info (12023): Found entity 1: debouncing File: C:/intelFPGA/17.1/top/timer/src/debouncing.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file _1ms.sv
-    Info (12023): Found entity 1: _1ms File: A:/intelFPGA/proj/sec/src/_1ms.sv Line: 3
+    Info (12023): Found entity 1: _1ms File: C:/intelFPGA/17.1/top/timer/src/_1ms.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file transformer.sv
-    Info (12023): Found entity 1: transformer File: A:/intelFPGA/proj/sec/src/transformer.sv Line: 1
+    Info (12023): Found entity 1: transformer File: C:/intelFPGA/17.1/top/timer/src/transformer.sv Line: 1
 Info (12021): Found 0 design units, including 0 entities, in source file time_pkg.sv
 Info (12021): Found 1 design units, including 1 entities, in source file timer_ssms.sv
-    Info (12023): Found entity 1: timer_ssms File: A:/intelFPGA/proj/sec/src/timer_ssms.sv Line: 1
+    Info (12023): Found entity 1: timer_ssms File: C:/intelFPGA/17.1/top/timer/src/timer_ssms.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file seg7_control.sv
-    Info (12023): Found entity 1: seg7_control File: A:/intelFPGA/proj/sec/src/seg7_control.sv Line: 3
+    Info (12023): Found entity 1: seg7_control File: C:/intelFPGA/17.1/top/timer/src/seg7_control.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file main.sv
-    Info (12023): Found entity 1: main File: A:/intelFPGA/proj/sec/src/main.sv Line: 7
-Warning (12019): Can't analyze file -- file timer/tb/tb.sv is missing
-Info (12021): Found 1 design units, including 1 entities, in source file /intelfpga/proj/sec/tb/tb.sv
-    Info (12023): Found entity 1: tb File: A:/intelFPGA/proj/sec/tb/tb.sv Line: 2
-Warning (10236): Verilog HDL Implicit Net warning at tb.sv(14): created implicit net for "LED_RED" File: A:/intelFPGA/proj/sec/tb/tb.sv Line: 14
+    Info (12023): Found entity 1: main File: C:/intelFPGA/17.1/top/timer/src/main.sv Line: 5
 Info (12127): Elaborating entity "main" for the top level hierarchy
-Info (12128): Elaborating entity "debouncing" for hierarchy "debouncing:button" File: A:/intelFPGA/proj/sec/src/main.sv Line: 23
-Info (12128): Elaborating entity "_1ms" for hierarchy "_1ms:one_ms" File: A:/intelFPGA/proj/sec/src/main.sv Line: 25
-Warning (10230): Verilog HDL assignment warning at _1ms.sv(28): truncated value with size 32 to match size of target (26) File: A:/intelFPGA/proj/sec/src/_1ms.sv Line: 28
-Info (12128): Elaborating entity "timer_ssms" for hierarchy "timer_ssms:timer" File: A:/intelFPGA/proj/sec/src/main.sv Line: 27
-Info (12128): Elaborating entity "transformer" for hierarchy "transformer:megatron" File: A:/intelFPGA/proj/sec/src/main.sv Line: 30
-Warning (10230): Verilog HDL assignment warning at time_pkg.sv(36): truncated value with size 32 to match size of target (6) File: A:/intelFPGA/proj/sec/src/time_pkg.sv Line: 36
-Warning (10230): Verilog HDL assignment warning at transformer.sv(12): truncated value with size 6 to match size of target (4) File: A:/intelFPGA/proj/sec/src/transformer.sv Line: 12
-Warning (10230): Verilog HDL assignment warning at transformer.sv(13): truncated value with size 6 to match size of target (4) File: A:/intelFPGA/proj/sec/src/transformer.sv Line: 13
-Warning (10230): Verilog HDL assignment warning at transformer.sv(14): truncated value with size 6 to match size of target (4) File: A:/intelFPGA/proj/sec/src/transformer.sv Line: 14
-Warning (10230): Verilog HDL assignment warning at transformer.sv(15): truncated value with size 6 to match size of target (4) File: A:/intelFPGA/proj/sec/src/transformer.sv Line: 15
-Warning (10230): Verilog HDL assignment warning at transformer.sv(16): truncated value with size 6 to match size of target (4) File: A:/intelFPGA/proj/sec/src/transformer.sv Line: 16
-Warning (10230): Verilog HDL assignment warning at transformer.sv(17): truncated value with size 6 to match size of target (4) File: A:/intelFPGA/proj/sec/src/transformer.sv Line: 17
-Info (12128): Elaborating entity "seg7_control" for hierarchy "seg7_control:seg7" File: A:/intelFPGA/proj/sec/src/main.sv Line: 33
-Warning (10034): Output port "LED_RED[9]" at seg7_control.sv(14) has no driver File: A:/intelFPGA/proj/sec/src/seg7_control.sv Line: 14
-Warning (10034): Output port "LED_RED[5..0]" at seg7_control.sv(14) has no driver File: A:/intelFPGA/proj/sec/src/seg7_control.sv Line: 14
-Info (12128): Elaborating entity "main_cntrl" for hierarchy "main_cntrl:inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
-Warning (10036): Verilog HDL or VHDL warning at main_cntrl.sv(12): object "best_int" assigned a value but never read File: A:/intelFPGA/proj/sec/src/main_cntrl.sv Line: 12
-Warning (10034): Output port "time_t_flat" at main_cntrl.sv(9) has no driver File: A:/intelFPGA/proj/sec/src/main_cntrl.sv Line: 9
-Warning (12158): Entity "main_cntrl" contains only dangling pins File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
-Error (12002): Port "t_interval.t[0]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
-Error (12002): Port "t_interval.t[10]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
-Error (12002): Port "t_interval.t[11]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
-Error (12002): Port "t_interval.t[12]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
-Error (12002): Port "t_interval.t[13]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
-Error (12002): Port "t_interval.t[14]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
-Error (12002): Port "t_interval.t[15]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
-Error (12002): Port "t_interval.t[16]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
-Error (12002): Port "t_interval.t[17]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
-Error (12002): Port "t_interval.t[18]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
-Error (12002): Port "t_interval.t[19]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
-Error (12002): Port "t_interval.t[1]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
-Error (12002): Port "t_interval.t[2]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
-Error (12002): Port "t_interval.t[3]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
-Error (12002): Port "t_interval.t[4]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
-Error (12002): Port "t_interval.t[5]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
-Error (12002): Port "t_interval.t[6]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
-Error (12002): Port "t_interval.t[7]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
-Error (12002): Port "t_interval.t[8]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
-Error (12002): Port "t_interval.t[9]" does not exist in macrofunction "inter" File: A:/intelFPGA/proj/sec/src/main.sv Line: 37
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (144001): Generated suppressed messages file A:/intelFPGA/proj/sec/src/output_files/top.map.smsg
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 20 errors, 17 warnings
-    Error: Peak virtual memory: 4775 megabytes
-    Error: Processing ended: Tue Sep 19 22:14:32 2023
-    Error: Elapsed time: 00:00:09
-    Error: Total CPU time (on all processors): 00:00:21
+Info (12128): Elaborating entity "debouncing" for hierarchy "debouncing:button" File: C:/intelFPGA/17.1/top/timer/src/main.sv Line: 23
+Info (12128): Elaborating entity "_1ms" for hierarchy "_1ms:one_ms" File: C:/intelFPGA/17.1/top/timer/src/main.sv Line: 25
+Warning (10230): Verilog HDL assignment warning at _1ms.sv(28): truncated value with size 32 to match size of target (26) File: C:/intelFPGA/17.1/top/timer/src/_1ms.sv Line: 28
+Info (12128): Elaborating entity "timer_ssms" for hierarchy "timer_ssms:timer" File: C:/intelFPGA/17.1/top/timer/src/main.sv Line: 27
+Info (12128): Elaborating entity "transformer" for hierarchy "transformer:megatron" File: C:/intelFPGA/17.1/top/timer/src/main.sv Line: 30
+Warning (10230): Verilog HDL assignment warning at time_pkg.sv(36): truncated value with size 32 to match size of target (6) File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 36
+Warning (10230): Verilog HDL assignment warning at transformer.sv(12): truncated value with size 6 to match size of target (4) File: C:/intelFPGA/17.1/top/timer/src/transformer.sv Line: 12
+Warning (10230): Verilog HDL assignment warning at transformer.sv(13): truncated value with size 6 to match size of target (4) File: C:/intelFPGA/17.1/top/timer/src/transformer.sv Line: 13
+Warning (10230): Verilog HDL assignment warning at transformer.sv(14): truncated value with size 6 to match size of target (4) File: C:/intelFPGA/17.1/top/timer/src/transformer.sv Line: 14
+Warning (10230): Verilog HDL assignment warning at transformer.sv(15): truncated value with size 6 to match size of target (4) File: C:/intelFPGA/17.1/top/timer/src/transformer.sv Line: 15
+Warning (10230): Verilog HDL assignment warning at transformer.sv(16): truncated value with size 6 to match size of target (4) File: C:/intelFPGA/17.1/top/timer/src/transformer.sv Line: 16
+Warning (10230): Verilog HDL assignment warning at transformer.sv(17): truncated value with size 6 to match size of target (4) File: C:/intelFPGA/17.1/top/timer/src/transformer.sv Line: 17
+Info (12128): Elaborating entity "seg7_control" for hierarchy "seg7_control:seg7" File: C:/intelFPGA/17.1/top/timer/src/main.sv Line: 33
+Warning (10034): Output port "LED_RED[9]" at seg7_control.sv(14) has no driver File: C:/intelFPGA/17.1/top/timer/src/seg7_control.sv Line: 14
+Warning (10034): Output port "LED_RED[5..0]" at seg7_control.sv(14) has no driver File: C:/intelFPGA/17.1/top/timer/src/seg7_control.sv Line: 14
+Info (12128): Elaborating entity "main_cntrl" for hierarchy "main_cntrl:inter" File: C:/intelFPGA/17.1/top/timer/src/main.sv Line: 37
+Warning (10036): Verilog HDL or VHDL warning at main_cntrl.sv(14): object "best_int" assigned a value but never read File: C:/intelFPGA/17.1/top/timer/src/main_cntrl.sv Line: 14
+Info (278001): Inferred 11 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "transformer:megatron|Mod0" File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 36
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "transformer:megatron|Mod1" File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 36
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "transformer:megatron|Div0" File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 36
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "transformer:megatron|Mod2" File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 36
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "transformer:megatron|Div1" File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 36
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "transformer:megatron|Mod3" File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 36
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "transformer:megatron|Div2" File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 36
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "transformer:megatron|Mod4" File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 36
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "transformer:megatron|Div3" File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 36
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "transformer:megatron|Mod5" File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 36
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "transformer:megatron|Div4" File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 36
+Info (12130): Elaborated megafunction instantiation "transformer:megatron|lpm_divide:Mod0" File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 36
+Info (12133): Instantiated megafunction "transformer:megatron|lpm_divide:Mod0" with the following parameter: File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 36
+    Info (12134): Parameter "LPM_WIDTHN" = "20"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_i3m.tdf
+    Info (12023): Found entity 1: lpm_divide_i3m File: C:/intelFPGA/17.1/top/timer/src/db/lpm_divide_i3m.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_llh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_llh File: C:/intelFPGA/17.1/top/timer/src/db/sign_div_unsign_llh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_gve.tdf
+    Info (12023): Found entity 1: alt_u_div_gve File: C:/intelFPGA/17.1/top/timer/src/db/alt_u_div_gve.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "transformer:megatron|lpm_divide:Mod1" File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 36
+Info (12133): Instantiated megafunction "transformer:megatron|lpm_divide:Mod1" with the following parameter: File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 36
+    Info (12134): Parameter "LPM_WIDTHN" = "20"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_l3m.tdf
+    Info (12023): Found entity 1: lpm_divide_l3m File: C:/intelFPGA/17.1/top/timer/src/db/lpm_divide_l3m.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_olh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_olh File: C:/intelFPGA/17.1/top/timer/src/db/sign_div_unsign_olh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_mve.tdf
+    Info (12023): Found entity 1: alt_u_div_mve File: C:/intelFPGA/17.1/top/timer/src/db/alt_u_div_mve.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "transformer:megatron|lpm_divide:Div0" File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 36
+Info (12133): Instantiated megafunction "transformer:megatron|lpm_divide:Div0" with the following parameter: File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 36
+    Info (12134): Parameter "LPM_WIDTHN" = "7"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_4am.tdf
+    Info (12023): Found entity 1: lpm_divide_4am File: C:/intelFPGA/17.1/top/timer/src/db/lpm_divide_4am.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_akh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_akh File: C:/intelFPGA/17.1/top/timer/src/db/sign_div_unsign_akh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_qse.tdf
+    Info (12023): Found entity 1: alt_u_div_qse File: C:/intelFPGA/17.1/top/timer/src/db/alt_u_div_qse.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "transformer:megatron|lpm_divide:Mod2" File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 36
+Info (12133): Instantiated megafunction "transformer:megatron|lpm_divide:Mod2" with the following parameter: File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 36
+    Info (12134): Parameter "LPM_WIDTHN" = "20"
+    Info (12134): Parameter "LPM_WIDTHD" = "10"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_v4m.tdf
+    Info (12023): Found entity 1: lpm_divide_v4m File: C:/intelFPGA/17.1/top/timer/src/db/lpm_divide_v4m.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_2nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_2nh File: C:/intelFPGA/17.1/top/timer/src/db/sign_div_unsign_2nh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_a2f.tdf
+    Info (12023): Found entity 1: alt_u_div_a2f File: C:/intelFPGA/17.1/top/timer/src/db/alt_u_div_a2f.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "transformer:megatron|lpm_divide:Div1" File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 36
+Info (12133): Instantiated megafunction "transformer:megatron|lpm_divide:Div1" with the following parameter: File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 36
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hbm.tdf
+    Info (12023): Found entity 1: lpm_divide_hbm File: C:/intelFPGA/17.1/top/timer/src/db/lpm_divide_hbm.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_nlh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_nlh File: C:/intelFPGA/17.1/top/timer/src/db/sign_div_unsign_nlh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kve.tdf
+    Info (12023): Found entity 1: alt_u_div_kve File: C:/intelFPGA/17.1/top/timer/src/db/alt_u_div_kve.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "transformer:megatron|lpm_divide:Mod3" File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 36
+Info (12133): Instantiated megafunction "transformer:megatron|lpm_divide:Mod3" with the following parameter: File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 36
+    Info (12134): Parameter "LPM_WIDTHN" = "20"
+    Info (12134): Parameter "LPM_WIDTHD" = "14"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_35m.tdf
+    Info (12023): Found entity 1: lpm_divide_35m File: C:/intelFPGA/17.1/top/timer/src/db/lpm_divide_35m.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_6nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_6nh File: C:/intelFPGA/17.1/top/timer/src/db/sign_div_unsign_6nh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_i2f.tdf
+    Info (12023): Found entity 1: alt_u_div_i2f File: C:/intelFPGA/17.1/top/timer/src/db/alt_u_div_i2f.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "transformer:megatron|lpm_divide:Div2" File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 36
+Info (12133): Instantiated megafunction "transformer:megatron|lpm_divide:Div2" with the following parameter: File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 36
+    Info (12134): Parameter "LPM_WIDTHN" = "14"
+    Info (12134): Parameter "LPM_WIDTHD" = "10"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_vcm.tdf
+    Info (12023): Found entity 1: lpm_divide_vcm File: C:/intelFPGA/17.1/top/timer/src/db/lpm_divide_vcm.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_5nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_5nh File: C:/intelFPGA/17.1/top/timer/src/db/sign_div_unsign_5nh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_g2f.tdf
+    Info (12023): Found entity 1: alt_u_div_g2f File: C:/intelFPGA/17.1/top/timer/src/db/alt_u_div_g2f.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "transformer:megatron|lpm_divide:Mod4" File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 36
+Info (12133): Instantiated megafunction "transformer:megatron|lpm_divide:Mod4" with the following parameter: File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 36
+    Info (12134): Parameter "LPM_WIDTHN" = "20"
+    Info (12134): Parameter "LPM_WIDTHD" = "17"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_65m.tdf
+    Info (12023): Found entity 1: lpm_divide_65m File: C:/intelFPGA/17.1/top/timer/src/db/lpm_divide_65m.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_9nh File: C:/intelFPGA/17.1/top/timer/src/db/sign_div_unsign_9nh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_o2f.tdf
+    Info (12023): Found entity 1: alt_u_div_o2f File: C:/intelFPGA/17.1/top/timer/src/db/alt_u_div_o2f.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "transformer:megatron|lpm_divide:Div3" File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 36
+Info (12133): Instantiated megafunction "transformer:megatron|lpm_divide:Div3" with the following parameter: File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 36
+    Info (12134): Parameter "LPM_WIDTHN" = "17"
+    Info (12134): Parameter "LPM_WIDTHD" = "14"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_6dm.tdf
+    Info (12023): Found entity 1: lpm_divide_6dm File: C:/intelFPGA/17.1/top/timer/src/db/lpm_divide_6dm.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_cnh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_cnh File: C:/intelFPGA/17.1/top/timer/src/db/sign_div_unsign_cnh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_u2f.tdf
+    Info (12023): Found entity 1: alt_u_div_u2f File: C:/intelFPGA/17.1/top/timer/src/db/alt_u_div_u2f.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "transformer:megatron|lpm_divide:Mod5" File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 36
+Info (12133): Instantiated megafunction "transformer:megatron|lpm_divide:Mod5" with the following parameter: File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 36
+    Info (12134): Parameter "LPM_WIDTHN" = "20"
+    Info (12134): Parameter "LPM_WIDTHD" = "20"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_05m.tdf
+    Info (12023): Found entity 1: lpm_divide_05m File: C:/intelFPGA/17.1/top/timer/src/db/lpm_divide_05m.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_3nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_3nh File: C:/intelFPGA/17.1/top/timer/src/db/sign_div_unsign_3nh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_c2f.tdf
+    Info (12023): Found entity 1: alt_u_div_c2f File: C:/intelFPGA/17.1/top/timer/src/db/alt_u_div_c2f.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "transformer:megatron|lpm_divide:Div4" File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 36
+Info (12133): Instantiated megafunction "transformer:megatron|lpm_divide:Div4" with the following parameter: File: C:/intelFPGA/17.1/top/timer/src/time_pkg.sv Line: 36
+    Info (12134): Parameter "LPM_WIDTHN" = "20"
+    Info (12134): Parameter "LPM_WIDTHD" = "17"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_3dm.tdf
+    Info (12023): Found entity 1: lpm_divide_3dm File: C:/intelFPGA/17.1/top/timer/src/db/lpm_divide_3dm.tdf Line: 24
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LED_RED[0]" is stuck at GND File: C:/intelFPGA/17.1/top/timer/src/main.sv Line: 7
+    Warning (13410): Pin "LED_RED[1]" is stuck at GND File: C:/intelFPGA/17.1/top/timer/src/main.sv Line: 7
+    Warning (13410): Pin "LED_RED[2]" is stuck at GND File: C:/intelFPGA/17.1/top/timer/src/main.sv Line: 7
+    Warning (13410): Pin "LED_RED[3]" is stuck at GND File: C:/intelFPGA/17.1/top/timer/src/main.sv Line: 7
+    Warning (13410): Pin "LED_RED[4]" is stuck at GND File: C:/intelFPGA/17.1/top/timer/src/main.sv Line: 7
+    Warning (13410): Pin "LED_RED[5]" is stuck at GND File: C:/intelFPGA/17.1/top/timer/src/main.sv Line: 7
+    Warning (13410): Pin "LED_RED[9]" is stuck at GND File: C:/intelFPGA/17.1/top/timer/src/main.sv Line: 7
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/intelFPGA/17.1/top/timer/src/output_files/top.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 2033 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 38 output pins
+    Info (21061): Implemented 1991 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 4866 megabytes
+    Info: Processing ended: Tue Sep 26 12:09:33 2023
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:00:50
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in A:/intelFPGA/proj/sec/src/output_files/top.map.smsg.
+The suppressed messages can be found in C:/intelFPGA/17.1/top/timer/src/output_files/top.map.smsg.
 
 

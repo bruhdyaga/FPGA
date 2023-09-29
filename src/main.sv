@@ -1,8 +1,6 @@
 `timescale 1ns / 1ps
 
-`include "time_pkg.sv"
 
-import time_pkg::*;
 
 module main(
     input clk, KEY0, KEY1, KEY2,
@@ -13,6 +11,8 @@ module main(
 	 output [0:6] HEX3
     );
     
+	 	
+	
     // Internal wires for connecting inner modules
     logic w_1000Hz;
     logic [3:0] ones, tens, huns, thous, ten_thous, hun_thous;

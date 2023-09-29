@@ -1,5 +1,7 @@
-`timescale 1 ps/ 1 ps
-module testbench();
+`timescale 10 s/ 20 ns
+`include "time_pkg.sv"
+import time_pkg::*;
+module tb();
 
 // test vector input registers
 logic clk;
@@ -11,9 +13,11 @@ logic [6:0]  HEX0;
 logic [6:0]  HEX1;
 logic [6:0]  HEX2;
 logic [6:0]  HEX3;
+logic [9:0]  LED_RED;
+
 
 // assign statements (if any)                          
-main testbench babr(
+main testbench(
 // port map - connection between master ports and signals/registers   
         .clk(clk),
         .KEY0(KEY0),
@@ -23,6 +27,9 @@ main testbench babr(
 		  .HEX1(HEX1),
 		  .HEX2(HEX2),
 		  .HEX3(HEX3),
+		  .LED_RED(LED_RED)
+		  
+		 
 		  
 );
 
@@ -33,35 +40,35 @@ begin
   KEY1 = 0; 
   KEY2 = 0;  
                     
-  # 10;
+  # 1000000000;
   KEY0 = 1;
   KEY1 = 0; 
   KEY2 = 0;  
                
-  # 15;
+  # 1000000000;
   KEY0 = 0;
   KEY1 = 1; 
   KEY2 = 0;  
               
-  # 20;
+  # 1000000000;
   KEY0 = 0;
   KEY1 = 1; 
   KEY2 = 0;  
                 
-  # 100;
+  # 1000000000;
   KEY0 = 1;
   KEY1 = 0; 
   KEY2 = 0;  
                       
-  # 10;
-  KEY0 = 0;
+  # 1000000000;
+  KEY0 = 1;
   KEY1 = 0; 
-  KEY2 = 1;  
+  KEY2 = 0;  
   $display("Running testbench");                       
-  # 10;
+  # 1000000000;
 end                                                    
 
 always 
-  #5  clk =  ! clk;    //создание clk                                                
+  #1  clk =  ! clk;    //создание clk                                                
  
 endmodule

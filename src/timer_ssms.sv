@@ -2,9 +2,9 @@ module timer_ssms(
 	input clk, KEY2,
 	input key0,
 	input time_1ms,
-	input time_t t_interval,
+	input logic [19:0] t_interval,
 	output logic [19:0] t2,
-	output time_t t
+	output logic [19:0] t
 );
 	
 	logic [19:0] t_show;
