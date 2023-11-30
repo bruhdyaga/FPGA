@@ -1,0 +1,1 @@
+call modelsim -do LVDS_capture_run_msim_rtl_verilog.do
