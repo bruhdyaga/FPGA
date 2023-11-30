@@ -1,0 +1,1 @@
+modelsim -do top_run_msim_rtl_verilog_tb_SPI.do
