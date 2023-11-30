@@ -1,1 +1,0 @@
-modelsim -do top_run_msim_gate_systemverilog.do
