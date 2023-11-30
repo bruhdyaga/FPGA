@@ -1,7 +1,7 @@
 `ifndef time_pkg
 `define time_pkg
 
-package  time_pkg;
+  
 
 
 	function logic[19:0]  time_delta(logic[19:0]  t2, logic[19:0]  t1); // res is (t2-t1), t2 >= t1
@@ -35,6 +35,6 @@ package  time_pkg;
 		return res;
 	endfunction
 	
-endpackage 
+ 
 
 `endif

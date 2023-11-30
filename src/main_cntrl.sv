@@ -1,5 +1,7 @@
+
 `include "time_pkg.sv"
-import time_pkg::*;
+
+
 module main_cntrl(
 	input clk, KEY2,
 	

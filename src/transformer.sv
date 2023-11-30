@@ -1,3 +1,5 @@
+`include "time_pkg.sv"
+
 module transformer (
 	input [19:0] t,
 	output logic [3:0] ones,

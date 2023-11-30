@@ -23,16 +23,16 @@ module seg7_control(
 	 logic [3:0]range_three;
 	 logic [3:0]range_four;
 	 
-    parameter ZERO  = 7'b000_0001;  // 0
-    parameter ONE   = 7'b100_1111;  // 1
-    parameter TWO   = 7'b001_0010;  // 2 
-    parameter THREE = 7'b000_0110;  // 3
-    parameter FOUR  = 7'b100_1100;  // 4
-    parameter FIVE  = 7'b010_0100;  // 5
-    parameter SIX   = 7'b010_0000;  // 6
-    parameter SEVEN = 7'b000_1111;  // 7
-    parameter EIGHT = 7'b000_0000;  // 8
-    parameter NINE  = 7'b000_0100;  // 9
+    parameter ZERO  = 7'b0000001;  // 0
+    parameter ONE   = 7'b1001111;  // 1
+    parameter TWO   = 7'b0010010;  // 2 
+    parameter THREE = 7'b0000110;  // 3
+    parameter FOUR  = 7'b1001100;  // 4
+    parameter FIVE  = 7'b0100100;  // 5
+    parameter SIX   = 7'b0100000;  // 6
+    parameter SEVEN = 7'b0001111;  // 7
+    parameter EIGHT = 7'b0000000;  // 8
+    parameter NINE  = 7'b0000100;  // 9
 
 always_ff @(posedge clk or negedge KEY2)
 		if (!KEY2) begin
@@ -85,7 +85,7 @@ always @(posedge time_1ms or negedge KEY2)
 	 
 	 end
 	 else begin
-	 if ((t2 < 3000)|((t2 > 3200)&(t2 < 3800))|((t2 > 4000)&(t2 < 4600))|(t2 > 4800)) begin
+	 if ((t < 3000)|((t > 3200)&(t < 3800))|((t > 4000)&(t < 4600))|(t > 4800)) begin
 		case(range_one)
 			 4'b0000 : HEX0 = ZERO;
 			 4'b0001 : HEX0 = ONE;

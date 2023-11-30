@@ -28,6 +28,6 @@ always_ff @(posedge clk or negedge KEY2)
                 ctr_reg <= ctr_reg + 1;
 					 end
 					
-    assign time_1ms = clk_out_reg;
+    assign time_1ms = clk;
 
 endmodule
