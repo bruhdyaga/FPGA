@@ -1,2 +1,0 @@
-Info (10281): Verilog HDL Declaration information at debouncing.sv(2): object "KEY0" differs only in case from object "key0" in the same scope File: C:/intelFPGA/17.1/top/timer/src/debouncing.sv Line: 2
-Warning (10268): Verilog HDL information at _1ms.sv(12): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA/17.1/top/timer/src/_1ms.sv Line: 12
