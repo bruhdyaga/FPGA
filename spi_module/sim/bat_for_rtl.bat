@@ -1,0 +1,1 @@
+modelsim -do spi_module_run_msim_rtl_verilog.do
