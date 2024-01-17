@@ -1,9 +1,10 @@
 module spi_module
 (
-         input I_clk, // глобальные часы 50 МГц
+         input I_clk  , // глобальные часы 50 МГц
          input I_rst_n, // Сброс сигнала, активный низкий
          input I_rx_en, // сигнал включения чтения
          input I_tx_en, // отправить сигнал разрешения
+         input logic [7:0] I_data_in,
          output reg [7: 0] O_data_out, // полученные данные
          output reg O_tx_done, // Отправить флаг завершения байта
          output reg O_rx_done, // Получить флаг завершения байта
@@ -15,7 +16,6 @@ module spi_module
          output reg O_spi_mosi // Выход SPI, используемый для отправки данных на ведомый          
 );
 
-logic [7:0]   I_data_in       ; // данные для отправки
 logic [3:0]   R_tx_state      ; 
 logic [3:0]   R_rx_state      ;
 
@@ -187,7 +187,12 @@ end
 
 adc adc_inst
 (
-    .I_data_in(I_data_in)
+    .I_data_in(I_data_in),
+    .O_spi_sck(O_spi_sck),
+    .I_rst_n(I_rst_n),
+    .I_tx_en(I_tx_en),
+    .I_clk(I_clk),
+    .O_tx_done(O_tx_done)
 );
 
 endmodule
