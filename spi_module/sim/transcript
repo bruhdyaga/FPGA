@@ -1,0 +1,1754 @@
+# Reading C:/intelFPGA/17.1/modelsim_ase/tcl/vsim/pref.tcl
+# do spi_module_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:24:17 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# 
+# Top level modules:
+# 	spi_module
+# End time: 10:24:17 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv {../src/adc.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:24:17 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/adc.sv 
+# -- Compiling module adc
+# ** Error: ../src/adc.sv(133): (vlog-2730) Undefined variable: 'O_spi_cs'.
+# End time: 10:24:17 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA/17.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./spi_module_run_msim_rtl_verilog.do line 9
+# C:/intelFPGA/17.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv {../src/adc.sv}"
+do spi_module_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:26:57 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# 
+# Top level modules:
+# 	spi_module
+# End time: 10:26:58 on Jan 17,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv {../src/adc.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:26:58 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/adc.sv 
+# -- Compiling module adc
+# 
+# Top level modules:
+# 	adc
+# End time: 10:26:58 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv {../tb/tb_spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:26:58 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../tb/tb_spi_module.sv 
+# -- Compiling module tb_spi_module
+# 
+# Top level modules:
+# 	tb_spi_module
+# End time: 10:26:58 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_spi_module
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_spi_module 
+# Start time: 10:26:58 on Jan 17,2024
+# Loading sv_std.std
+# Loading work.tb_spi_module
+# Loading work.spi_module
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 100us
+do spi_module_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:30:13 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# 
+# Top level modules:
+# 	spi_module
+# End time: 10:30:13 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv {../src/adc.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:30:14 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/adc.sv 
+# -- Compiling module adc
+# ** Error (suppressible): (vlog-12003) ../src/adc.sv(396): Variable 'I_data_in' written by continuous and procedural assignments. See ../src/adc.sv(140). 
+# End time: 10:30:14 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA/17.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./spi_module_run_msim_rtl_verilog.do line 9
+# C:/intelFPGA/17.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv {../src/adc.sv}"
+do spi_module_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:33:01 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# 
+# Top level modules:
+# 	spi_module
+# End time: 10:33:01 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv {../src/adc.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:33:01 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/adc.sv 
+# -- Compiling module adc
+# 
+# Top level modules:
+# 	adc
+# End time: 10:33:01 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv {../tb/tb_spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:33:01 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../tb/tb_spi_module.sv 
+# -- Compiling module tb_spi_module
+# 
+# Top level modules:
+# 	tb_spi_module
+# End time: 10:33:02 on Jan 17,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_spi_module
+# End time: 10:33:03 on Jan 17,2024, Elapsed time: 0:06:05
+# Errors: 3, Warnings: 0
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_spi_module 
+# Start time: 10:33:04 on Jan 17,2024
+# Loading sv_std.std
+# Loading work.tb_spi_module
+# Loading work.spi_module
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 100us
+do spi_module_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:35:41 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# ** Error (suppressible): ../src/spi_module.sv(19): (vlog-2388) 'I_data_in' already declared in this scope (spi_module).
+# End time: 10:35:41 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA/17.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./spi_module_run_msim_rtl_verilog.do line 8
+# C:/intelFPGA/17.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv {../src/spi_module.sv}"
+do spi_module_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:36:01 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# 
+# Top level modules:
+# 	spi_module
+# End time: 10:36:01 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv {../src/adc.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:36:02 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/adc.sv 
+# -- Compiling module adc
+# 
+# Top level modules:
+# 	adc
+# End time: 10:36:02 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv {../tb/tb_spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:36:02 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../tb/tb_spi_module.sv 
+# -- Compiling module tb_spi_module
+# 
+# Top level modules:
+# 	tb_spi_module
+# End time: 10:36:02 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_spi_module
+# End time: 10:36:03 on Jan 17,2024, Elapsed time: 0:02:59
+# Errors: 3, Warnings: 0
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_spi_module 
+# Start time: 10:36:04 on Jan 17,2024
+# Loading sv_std.std
+# Loading work.tb_spi_module
+# Loading work.spi_module
+# ** Warning: (vsim-3017) ../tb/tb_spi_module.sv(22): [TFMPC] - Too few port connections. Expected 12, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_spi_module/uut File: ../src/spi_module.sv
+# ** Warning: (vsim-3722) ../tb/tb_spi_module.sv(22): [TFMPC] - Missing connection for port 'I_data_in'.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 100us
+do spi_module_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:46:00 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# 
+# Top level modules:
+# 	spi_module
+# End time: 10:46:00 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv {../src/adc.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:46:00 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/adc.sv 
+# -- Compiling module adc
+# 
+# Top level modules:
+# 	adc
+# End time: 10:46:01 on Jan 17,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv {../tb/tb_spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:46:01 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../tb/tb_spi_module.sv 
+# -- Compiling module tb_spi_module
+# 
+# Top level modules:
+# 	tb_spi_module
+# End time: 10:46:01 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_spi_module
+# End time: 10:46:02 on Jan 17,2024, Elapsed time: 0:09:58
+# Errors: 0, Warnings: 2
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_spi_module 
+# Start time: 10:46:03 on Jan 17,2024
+# Loading sv_std.std
+# Loading work.tb_spi_module
+# Loading work.spi_module
+# Loading work.adc
+# ** Warning: (vsim-3017) ../src/spi_module.sv(188): [TFMPC] - Too few port connections. Expected 4, found 1.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_spi_module/uut/adc_inst File: ../src/adc.sv
+# ** Warning: (vsim-3722) ../src/spi_module.sv(188): [TFMPC] - Missing connection for port 'I_clk'.
+# ** Warning: (vsim-3722) ../src/spi_module.sv(188): [TFMPC] - Missing connection for port 'I_rst_n'.
+# ** Warning: (vsim-3722) ../src/spi_module.sv(188): [TFMPC] - Missing connection for port 'I_tx_en'.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 100us
+do spi_module_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:49:28 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# 
+# Top level modules:
+# 	spi_module
+# End time: 10:49:28 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv {../src/adc.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:49:28 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/adc.sv 
+# -- Compiling module adc
+# 
+# Top level modules:
+# 	adc
+# End time: 10:49:28 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv {../tb/tb_spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:49:28 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../tb/tb_spi_module.sv 
+# -- Compiling module tb_spi_module
+# 
+# Top level modules:
+# 	tb_spi_module
+# End time: 10:49:28 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_spi_module
+# End time: 10:49:30 on Jan 17,2024, Elapsed time: 0:03:27
+# Errors: 0, Warnings: 4
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_spi_module 
+# Start time: 10:49:30 on Jan 17,2024
+# Loading sv_std.std
+# Loading work.tb_spi_module
+# Loading work.spi_module
+# ** Warning: (vsim-3017) ../tb/tb_spi_module.sv(22): [TFMPC] - Too few port connections. Expected 12, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_spi_module/uut File: ../src/spi_module.sv
+# ** Warning: (vsim-3722) ../tb/tb_spi_module.sv(22): [TFMPC] - Missing connection for port 'I_data_in'.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 100us
+do spi_module_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:51:56 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# 
+# Top level modules:
+# 	spi_module
+# End time: 11:51:56 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv {../src/adc.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:51:56 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/adc.sv 
+# -- Compiling module adc
+# ** Error (suppressible): (vlog-12003) ../src/adc.sv(396): Variable 'I_data_in' written by continuous and procedural assignments. See ../src/adc.sv(140). 
+# End time: 11:51:56 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA/17.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./spi_module_run_msim_rtl_verilog.do line 9
+# C:/intelFPGA/17.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv {../src/adc.sv}"
+do spi_module_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:52:27 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# 
+# Top level modules:
+# 	spi_module
+# End time: 11:52:27 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv {../src/adc.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:52:27 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/adc.sv 
+# -- Compiling module adc
+# 
+# Top level modules:
+# 	adc
+# End time: 11:52:27 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv {../tb/tb_spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:52:27 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../tb/tb_spi_module.sv 
+# -- Compiling module tb_spi_module
+# 
+# Top level modules:
+# 	tb_spi_module
+# End time: 11:52:27 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_spi_module
+# End time: 11:52:29 on Jan 17,2024, Elapsed time: 1:02:59
+# Errors: 3, Warnings: 2
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_spi_module 
+# Start time: 11:52:29 on Jan 17,2024
+# Loading sv_std.std
+# Loading work.tb_spi_module
+# Loading work.spi_module
+# Loading work.adc
+# ** Warning: (vsim-3035) Instantiation depth of '/tb_spi_module/uut/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst' is 51. This might indicate a recursive instantiation. Increasing limit to 75.
+# ** Error: (vsim-3036) Instantiation depth of '/tb_spi_module/uut/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst' is 75. Assuming recursive instantiation.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_spi_module/uut/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst/spi_inst/adc_inst File: ../src/adc.sv
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./spi_module_run_msim_rtl_verilog.do PAUSED at line 13
+do spi_module_run_msim_rtl_verilog.do
+# transcript on
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:54:16 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# 
+# Top level modules:
+# 	spi_module
+# End time: 11:54:16 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv {../src/adc.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:54:17 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/adc.sv 
+# -- Compiling module adc
+# 
+# Top level modules:
+# 	adc
+# End time: 11:54:17 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv {../tb/tb_spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:54:17 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../tb/tb_spi_module.sv 
+# -- Compiling module tb_spi_module
+# 
+# Top level modules:
+# 	tb_spi_module
+# End time: 11:54:17 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_spi_module
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_spi_module 
+# Start time: 11:52:29 on Jan 17,2024
+# Loading sv_std.std
+# Loading work.tb_spi_module
+# Loading work.spi_module
+# Loading work.adc
+# ** Warning: (vsim-3017) ../src/spi_module.sv(188): [TFMPC] - Too few port connections. Expected 4, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_spi_module/uut/adc_inst File: ../src/adc.sv
+# ** Error: (vsim-3063) ../src/spi_module.sv(188): Port 'O_spi_sck' not found in the connected module (2nd connection).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_spi_module/uut/adc_inst File: ../src/adc.sv
+# ** Warning: (vsim-3722) ../src/spi_module.sv(188): [TFMPC] - Missing connection for port 'I_clk'.
+# ** Warning: (vsim-3722) ../src/spi_module.sv(188): [TFMPC] - Missing connection for port 'I_rst_n'.
+# ** Warning: (vsim-3722) ../src/spi_module.sv(188): [TFMPC] - Missing connection for port 'I_tx_en'.
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./spi_module_run_msim_rtl_verilog.do PAUSED at line 13
+do spi_module_run_msim_rtl_verilog.do
+# transcript on
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:00:11 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# ** Error: (vlog-13069) ../src/spi_module.sv(8): near "output": syntax error, unexpected output, expecting ')'.
+# End time: 12:00:11 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA/17.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./spi_module_run_msim_rtl_verilog.do line 8
+# C:/intelFPGA/17.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv {../src/spi_module.sv}"
+do spi_module_run_msim_rtl_verilog.do
+# transcript on
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:00:34 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# 
+# Top level modules:
+# 	spi_module
+# End time: 12:00:34 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv {../src/adc.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:00:35 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/adc.sv 
+# -- Compiling module adc
+# ** Error: (vlog-13069) ../src/adc.sv(6): near ";": syntax error, unexpected ';', expecting ')'.
+# End time: 12:00:35 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA/17.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./spi_module_run_msim_rtl_verilog.do line 9
+# C:/intelFPGA/17.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv {../src/adc.sv}"
+do spi_module_run_msim_rtl_verilog.do
+# transcript on
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:00:57 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# 
+# Top level modules:
+# 	spi_module
+# End time: 12:00:57 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv {../src/adc.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:00:57 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/adc.sv 
+# -- Compiling module adc
+# ** Error: ../src/adc.sv(134): (vlog-2730) Undefined variable: 'O_spi_cs'.
+# End time: 12:00:57 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA/17.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./spi_module_run_msim_rtl_verilog.do line 9
+# C:/intelFPGA/17.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv {../src/adc.sv}"
+do spi_module_run_msim_rtl_verilog.do
+# transcript on
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:02:01 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# 
+# Top level modules:
+# 	spi_module
+# End time: 12:02:01 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv {../src/adc.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:02:01 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/adc.sv 
+# -- Compiling module adc
+# 
+# Top level modules:
+# 	adc
+# End time: 12:02:01 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv {../tb/tb_spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:02:01 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../tb/tb_spi_module.sv 
+# -- Compiling module tb_spi_module
+# 
+# Top level modules:
+# 	tb_spi_module
+# End time: 12:02:01 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_spi_module
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_spi_module 
+# Start time: 11:52:29 on Jan 17,2024
+# Loading sv_std.std
+# Loading work.tb_spi_module
+# Loading work.spi_module
+# Loading work.adc
+# ** Warning: (vsim-3017) ../tb/tb_spi_module.sv(22): [TFMPC] - Too few port connections. Expected 12, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_spi_module/uut File: ../src/spi_module.sv
+# ** Warning: (vsim-3722) ../tb/tb_spi_module.sv(22): [TFMPC] - Missing connection for port 'I_data_in'.
+# ** Warning: (vsim-3017) ../src/spi_module.sv(188): [TFMPC] - Too few port connections. Expected 5, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_spi_module/uut/adc_inst File: ../src/adc.sv
+# ** Warning: (vsim-3722) ../src/spi_module.sv(188): [TFMPC] - Missing connection for port 'I_clk'.
+# ** Warning: (vsim-3722) ../src/spi_module.sv(188): [TFMPC] - Missing connection for port 'I_rst_n'.
+# ** Warning: (vsim-3722) ../src/spi_module.sv(188): [TFMPC] - Missing connection for port 'I_tx_en'.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 100us
+do spi_module_run_msim_rtl_verilog.do
+# transcript on
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:07:07 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# 
+# Top level modules:
+# 	spi_module
+# End time: 12:07:07 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv {../src/adc.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:07:07 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/adc.sv 
+# -- Compiling module adc
+# 
+# Top level modules:
+# 	adc
+# End time: 12:07:07 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv {../tb/tb_spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:07:07 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../tb/tb_spi_module.sv 
+# -- Compiling module tb_spi_module
+# 
+# Top level modules:
+# 	tb_spi_module
+# End time: 12:07:08 on Jan 17,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_spi_module
+# End time: 12:07:09 on Jan 17,2024, Elapsed time: 0:14:40
+# Errors: 2, Warnings: 11
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_spi_module 
+# Start time: 12:07:09 on Jan 17,2024
+# Loading sv_std.std
+# Loading work.tb_spi_module
+# Loading work.spi_module
+# Loading work.adc
+# ** Warning: (vsim-3017) ../tb/tb_spi_module.sv(22): [TFMPC] - Too few port connections. Expected 12, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_spi_module/uut File: ../src/spi_module.sv
+# ** Warning: (vsim-3722) ../tb/tb_spi_module.sv(22): [TFMPC] - Missing connection for port 'I_data_in'.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 100us
+do spi_module_run_msim_rtl_verilog.do
+# transcript on
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:10:06 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# 
+# Top level modules:
+# 	spi_module
+# End time: 12:10:07 on Jan 17,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv {../src/adc.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:10:07 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/adc.sv 
+# -- Compiling module adc
+# 
+# Top level modules:
+# 	adc
+# End time: 12:10:07 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv {../tb/tb_spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:10:07 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../tb/tb_spi_module.sv 
+# -- Compiling module tb_spi_module
+# 
+# Top level modules:
+# 	tb_spi_module
+# End time: 12:10:07 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_spi_module
+# End time: 12:10:08 on Jan 17,2024, Elapsed time: 0:02:59
+# Errors: 0, Warnings: 2
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_spi_module 
+# Start time: 12:10:08 on Jan 17,2024
+# Loading sv_std.std
+# Loading work.tb_spi_module
+# Loading work.spi_module
+# Loading work.adc
+# ** Warning: (vsim-3017) ../tb/tb_spi_module.sv(22): [TFMPC] - Too few port connections. Expected 12, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_spi_module/uut File: ../src/spi_module.sv
+# ** Warning: (vsim-3722) ../tb/tb_spi_module.sv(22): [TFMPC] - Missing connection for port 'I_data_in'.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 100us
+do spi_module_run_msim_rtl_verilog.do
+# transcript on
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:42:57 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# 
+# Top level modules:
+# 	spi_module
+# End time: 13:42:58 on Jan 17,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv {../src/adc.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:42:58 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/adc.sv 
+# -- Compiling module adc
+# 
+# Top level modules:
+# 	adc
+# End time: 13:42:58 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv {../tb/tb_spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:42:58 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../tb/tb_spi_module.sv 
+# -- Compiling module tb_spi_module
+# 
+# Top level modules:
+# 	tb_spi_module
+# End time: 13:42:58 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_spi_module
+# End time: 13:43:00 on Jan 17,2024, Elapsed time: 1:32:52
+# Errors: 0, Warnings: 2
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_spi_module 
+# Start time: 13:43:00 on Jan 17,2024
+# Loading sv_std.std
+# Loading work.tb_spi_module
+# Loading work.spi_module
+# Loading work.adc
+# ** Warning: (vsim-3017) ../tb/tb_spi_module.sv(22): [TFMPC] - Too few port connections. Expected 12, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_spi_module/uut File: ../src/spi_module.sv
+# ** Warning: (vsim-3722) ../tb/tb_spi_module.sv(22): [TFMPC] - Missing connection for port 'I_data_in'.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 100us
+do spi_module_run_msim_rtl_verilog.do
+# transcript on
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:44:14 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# 
+# Top level modules:
+# 	spi_module
+# End time: 13:44:15 on Jan 17,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv {../src/adc.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:44:15 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/adc.sv 
+# -- Compiling module adc
+# 
+# Top level modules:
+# 	adc
+# End time: 13:44:15 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv {../tb/tb_spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:44:15 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../tb/tb_spi_module.sv 
+# -- Compiling module tb_spi_module
+# 
+# Top level modules:
+# 	tb_spi_module
+# End time: 13:44:15 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_spi_module
+# End time: 13:44:16 on Jan 17,2024, Elapsed time: 0:01:16
+# Errors: 0, Warnings: 2
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_spi_module 
+# Start time: 13:44:18 on Jan 17,2024
+# Loading sv_std.std
+# Loading work.tb_spi_module
+# Loading work.spi_module
+# Loading work.adc
+# ** Warning: (vsim-3017) ../tb/tb_spi_module.sv(22): [TFMPC] - Too few port connections. Expected 12, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_spi_module/uut File: ../src/spi_module.sv
+# ** Warning: (vsim-3722) ../tb/tb_spi_module.sv(22): [TFMPC] - Missing connection for port 'I_data_in'.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 100us
+do spi_module_run_msim_rtl_verilog.do
+# transcript on
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:53:16 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# 
+# Top level modules:
+# 	spi_module
+# End time: 13:53:16 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv {../src/adc.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:53:16 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/adc.sv 
+# -- Compiling module adc
+# 
+# Top level modules:
+# 	adc
+# End time: 13:53:16 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv {../tb/tb_spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 13:53:16 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../tb/tb_spi_module.sv 
+# -- Compiling module tb_spi_module
+# 
+# Top level modules:
+# 	tb_spi_module
+# End time: 13:53:16 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_spi_module
+# End time: 13:53:18 on Jan 17,2024, Elapsed time: 0:09:00
+# Errors: 0, Warnings: 2
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_spi_module 
+# Start time: 13:53:18 on Jan 17,2024
+# Loading sv_std.std
+# Loading work.tb_spi_module
+# Loading work.spi_module
+# Loading work.adc
+# ** Warning: (vsim-3017) ../tb/tb_spi_module.sv(22): [TFMPC] - Too few port connections. Expected 12, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_spi_module/uut File: ../src/spi_module.sv
+# ** Warning: (vsim-3722) ../tb/tb_spi_module.sv(22): [TFMPC] - Missing connection for port 'I_data_in'.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 100us
+do spi_module_run_msim_rtl_verilog.do
+# transcript on
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:00:33 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# 
+# Top level modules:
+# 	spi_module
+# End time: 14:00:33 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv {../src/adc.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:00:33 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/adc.sv 
+# -- Compiling module adc
+# 
+# Top level modules:
+# 	adc
+# End time: 14:00:34 on Jan 17,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv {../tb/tb_spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:00:34 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../tb/tb_spi_module.sv 
+# -- Compiling module tb_spi_module
+# 
+# Top level modules:
+# 	tb_spi_module
+# End time: 14:00:34 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_spi_module
+# End time: 14:00:35 on Jan 17,2024, Elapsed time: 0:07:17
+# Errors: 0, Warnings: 2
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_spi_module 
+# Start time: 14:00:35 on Jan 17,2024
+# Loading sv_std.std
+# Loading work.tb_spi_module
+# Loading work.spi_module
+# Loading work.adc
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 100us
+do spi_module_run_msim_rtl_verilog.do
+# transcript on
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:01:29 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# 
+# Top level modules:
+# 	spi_module
+# End time: 14:01:29 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv {../src/adc.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:01:29 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/adc.sv 
+# -- Compiling module adc
+# 
+# Top level modules:
+# 	adc
+# End time: 14:01:29 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv {../tb/tb_spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:01:29 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../tb/tb_spi_module.sv 
+# -- Compiling module tb_spi_module
+# 
+# Top level modules:
+# 	tb_spi_module
+# End time: 14:01:29 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_spi_module
+# End time: 14:01:31 on Jan 17,2024, Elapsed time: 0:00:56
+# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_spi_module 
+# Start time: 14:01:31 on Jan 17,2024
+# Loading sv_std.std
+# Loading work.tb_spi_module
+# Loading work.spi_module
+# Loading work.adc
+# ** Warning: (vsim-3017) ../tb/tb_spi_module.sv(22): [TFMPC] - Too few port connections. Expected 12, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_spi_module/uut File: ../src/spi_module.sv
+# ** Warning: (vsim-3722) ../tb/tb_spi_module.sv(22): [TFMPC] - Missing connection for port 'I_data_in'.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 100us
+do spi_module_run_msim_rtl_verilog.do
+# transcript on
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:03:23 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# 
+# Top level modules:
+# 	spi_module
+# End time: 14:03:23 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv {../src/adc.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:03:23 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/adc.sv 
+# -- Compiling module adc
+# 
+# Top level modules:
+# 	adc
+# End time: 14:03:24 on Jan 17,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv {../tb/tb_spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:03:24 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../tb/tb_spi_module.sv 
+# -- Compiling module tb_spi_module
+# 
+# Top level modules:
+# 	tb_spi_module
+# End time: 14:03:24 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_spi_module
+# End time: 14:03:25 on Jan 17,2024, Elapsed time: 0:01:54
+# Errors: 0, Warnings: 2
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_spi_module 
+# Start time: 14:03:25 on Jan 17,2024
+# Loading sv_std.std
+# Loading work.tb_spi_module
+# Loading work.spi_module
+# Loading work.adc
+# ** Warning: (vsim-3017) ../tb/tb_spi_module.sv(22): [TFMPC] - Too few port connections. Expected 12, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_spi_module/uut File: ../src/spi_module.sv
+# ** Warning: (vsim-3722) ../tb/tb_spi_module.sv(22): [TFMPC] - Missing connection for port 'I_data_in'.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 100us
+do spi_module_run_msim_rtl_verilog.do
+# transcript on
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:05:27 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# 
+# Top level modules:
+# 	spi_module
+# End time: 14:05:27 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv {../src/adc.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:05:27 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/adc.sv 
+# -- Compiling module adc
+# 
+# Top level modules:
+# 	adc
+# End time: 14:05:27 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv {../tb/tb_spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:05:27 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../tb/tb_spi_module.sv 
+# -- Compiling module tb_spi_module
+# 
+# Top level modules:
+# 	tb_spi_module
+# End time: 14:05:27 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_spi_module
+# End time: 14:05:29 on Jan 17,2024, Elapsed time: 0:02:04
+# Errors: 0, Warnings: 2
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_spi_module 
+# Start time: 14:05:29 on Jan 17,2024
+# Loading sv_std.std
+# Loading work.tb_spi_module
+# Loading work.spi_module
+# Loading work.adc
+# ** Warning: (vsim-3017) ../tb/tb_spi_module.sv(22): [TFMPC] - Too few port connections. Expected 12, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_spi_module/uut File: ../src/spi_module.sv
+# ** Warning: (vsim-3722) ../tb/tb_spi_module.sv(22): [TFMPC] - Missing connection for port 'I_data_in'.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 100us
+do spi_module_run_msim_rtl_verilog.do
+# transcript on
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:06:01 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# 
+# Top level modules:
+# 	spi_module
+# End time: 14:06:02 on Jan 17,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv {../src/adc.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:06:02 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/adc.sv 
+# -- Compiling module adc
+# 
+# Top level modules:
+# 	adc
+# End time: 14:06:02 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv {../tb/tb_spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:06:02 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../tb/tb_spi_module.sv 
+# -- Compiling module tb_spi_module
+# 
+# Top level modules:
+# 	tb_spi_module
+# End time: 14:06:02 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_spi_module
+# End time: 14:06:03 on Jan 17,2024, Elapsed time: 0:00:34
+# Errors: 0, Warnings: 2
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_spi_module 
+# Start time: 14:06:03 on Jan 17,2024
+# Loading sv_std.std
+# Loading work.tb_spi_module
+# Loading work.spi_module
+# Loading work.adc
+# ** Warning: (vsim-3017) ../tb/tb_spi_module.sv(22): [TFMPC] - Too few port connections. Expected 12, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_spi_module/uut File: ../src/spi_module.sv
+# ** Warning: (vsim-3722) ../tb/tb_spi_module.sv(22): [TFMPC] - Missing connection for port 'I_data_in'.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 100us
+do spi_module_run_msim_rtl_verilog.do
+# transcript on
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:25:26 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# 
+# Top level modules:
+# 	spi_module
+# End time: 14:25:26 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv {../src/adc.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:25:26 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/adc.sv 
+# -- Compiling module adc
+# 
+# Top level modules:
+# 	adc
+# End time: 14:25:26 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv {../tb/tb_spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:25:26 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../tb/tb_spi_module.sv 
+# -- Compiling module tb_spi_module
+# 
+# Top level modules:
+# 	tb_spi_module
+# End time: 14:25:26 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_spi_module
+# End time: 14:25:28 on Jan 17,2024, Elapsed time: 0:19:25
+# Errors: 0, Warnings: 2
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_spi_module 
+# Start time: 14:25:28 on Jan 17,2024
+# Loading sv_std.std
+# Loading work.tb_spi_module
+# Loading work.spi_module
+# Loading work.adc
+# ** Warning: (vsim-3017) ../tb/tb_spi_module.sv(22): [TFMPC] - Too few port connections. Expected 12, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_spi_module/uut File: ../src/spi_module.sv
+# ** Warning: (vsim-3722) ../tb/tb_spi_module.sv(22): [TFMPC] - Missing connection for port 'I_data_in'.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 100us
+do spi_module_run_msim_rtl_verilog.do
+# transcript on
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:37:13 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# 
+# Top level modules:
+# 	spi_module
+# End time: 14:37:13 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv {../src/adc.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:37:13 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/adc.sv 
+# -- Compiling module adc
+# 
+# Top level modules:
+# 	adc
+# End time: 14:37:13 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv {../tb/tb_spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:37:13 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../tb/tb_spi_module.sv 
+# -- Compiling module tb_spi_module
+# 
+# Top level modules:
+# 	tb_spi_module
+# End time: 14:37:13 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_spi_module
+# End time: 14:37:15 on Jan 17,2024, Elapsed time: 0:11:47
+# Errors: 0, Warnings: 2
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_spi_module 
+# Start time: 14:37:15 on Jan 17,2024
+# Loading sv_std.std
+# Loading work.tb_spi_module
+# Loading work.spi_module
+# Loading work.adc
+# ** Warning: (vsim-3017) ../tb/tb_spi_module.sv(22): [TFMPC] - Too few port connections. Expected 12, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_spi_module/uut File: ../src/spi_module.sv
+# ** Warning: (vsim-3722) ../tb/tb_spi_module.sv(22): [TFMPC] - Missing connection for port 'I_data_in'.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 100us
+do spi_module_run_msim_rtl_verilog.do
+# transcript on
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:41:47 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# 
+# Top level modules:
+# 	spi_module
+# End time: 14:41:47 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv {../src/adc.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:41:47 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/adc.sv 
+# -- Compiling module adc
+# 
+# Top level modules:
+# 	adc
+# End time: 14:41:47 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv {../tb/tb_spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:41:47 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../tb/tb_spi_module.sv 
+# -- Compiling module tb_spi_module
+# ** Error: ../tb/tb_spi_module.sv(44): (vlog-2110) Illegal reference to net "O_spi_mosi".
+# End time: 14:41:47 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA/17.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./spi_module_run_msim_rtl_verilog.do line 11
+# C:/intelFPGA/17.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv {../tb/tb_spi_module.sv}"
+do spi_module_run_msim_rtl_verilog.do
+# transcript on
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:50:11 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# ** Error: (vlog-13069) ../src/spi_module.sv(103): near ";": syntax error, unexpected ';', expecting ':'.
+# End time: 14:50:11 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA/17.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./spi_module_run_msim_rtl_verilog.do line 8
+# C:/intelFPGA/17.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv {../src/spi_module.sv}"
+do spi_module_run_msim_rtl_verilog.do
+# transcript on
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:51:51 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# ** Error: ../src/spi_module.sv(103): Only one default per case statement allowed
+# End time: 14:51:51 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA/17.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./spi_module_run_msim_rtl_verilog.do line 8
+# C:/intelFPGA/17.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv {../src/spi_module.sv}"
+do spi_module_run_msim_rtl_verilog.do
+# transcript on
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:52:57 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# ** Error: ../src/spi_module.sv(103): Only one default per case statement allowed
+# End time: 14:52:57 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA/17.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./spi_module_run_msim_rtl_verilog.do line 8
+# C:/intelFPGA/17.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv {../src/spi_module.sv}"
+do spi_module_run_msim_rtl_verilog.do
+# transcript on
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:53:18 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# 
+# Top level modules:
+# 	spi_module
+# End time: 14:53:19 on Jan 17,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv {../src/adc.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:53:19 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/adc.sv 
+# -- Compiling module adc
+# 
+# Top level modules:
+# 	adc
+# End time: 14:53:19 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv {../tb/tb_spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:53:19 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../tb/tb_spi_module.sv 
+# -- Compiling module tb_spi_module
+# 
+# Top level modules:
+# 	tb_spi_module
+# End time: 14:53:19 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_spi_module
+# End time: 14:53:21 on Jan 17,2024, Elapsed time: 0:16:06
+# Errors: 16, Warnings: 2
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_spi_module 
+# Start time: 14:53:21 on Jan 17,2024
+# Loading sv_std.std
+# Loading work.tb_spi_module
+# Loading work.spi_module
+# Loading work.adc
+# ** Warning: (vsim-3017) ../tb/tb_spi_module.sv(22): [TFMPC] - Too few port connections. Expected 12, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_spi_module/uut File: ../src/spi_module.sv
+# ** Warning: (vsim-3722) ../tb/tb_spi_module.sv(22): [TFMPC] - Missing connection for port 'I_data_in'.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 100us
+do spi_module_run_msim_rtl_verilog.do
+# transcript on
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:06:18 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# ** Error: (vlog-13069) ../src/spi_module.sv(104): near "else": syntax error, unexpected else.
+# End time: 15:06:18 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA/17.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./spi_module_run_msim_rtl_verilog.do line 8
+# C:/intelFPGA/17.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv {../src/spi_module.sv}"
+do spi_module_run_msim_rtl_verilog.do
+# transcript on
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:07:16 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# ** Error: (vlog-13069) ../src/spi_module.sv(109): near "else": syntax error, unexpected else.
+# ** Error: (vlog-13069) ../src/spi_module.sv(179): near "else": syntax error, unexpected else.
+# ** Error: ../src/spi_module.sv(182): (vlog-13205) Syntax error found in the scope following 'R_rx_state'. Is there a missing '::'?
+# End time: 15:07:16 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# ** Error: C:/intelFPGA/17.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./spi_module_run_msim_rtl_verilog.do line 8
+# C:/intelFPGA/17.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv {../src/spi_module.sv}"
+do spi_module_run_msim_rtl_verilog.do
+# transcript on
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:11:06 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# ** Error: (vlog-13069) ../src/spi_module.sv(110): near "else": syntax error, unexpected else.
+# ** Error: (vlog-13069) ../src/spi_module.sv(180): near "else": syntax error, unexpected else.
+# ** Error: ../src/spi_module.sv(183): (vlog-13205) Syntax error found in the scope following 'R_rx_state'. Is there a missing '::'?
+# End time: 15:11:06 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# ** Error: C:/intelFPGA/17.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./spi_module_run_msim_rtl_verilog.do line 8
+# C:/intelFPGA/17.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv {../src/spi_module.sv}"
+do spi_module_run_msim_rtl_verilog.do
+# transcript on
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv {../src/spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:21:46 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/spi_module.sv 
+# -- Compiling module spi_module
+# 
+# Top level modules:
+# 	spi_module
+# End time: 15:21:46 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv {../src/adc.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:21:46 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../src/adc.sv 
+# -- Compiling module adc
+# 
+# Top level modules:
+# 	adc
+# End time: 15:21:46 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv {../tb/tb_spi_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:21:46 on Jan 17,2024
+# vlog -reportprogress 300 -sv ../tb/tb_spi_module.sv 
+# -- Compiling module tb_spi_module
+# 
+# Top level modules:
+# 	tb_spi_module
+# End time: 15:21:46 on Jan 17,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_spi_module
+# End time: 15:21:48 on Jan 17,2024, Elapsed time: 0:28:27
+# Errors: 16, Warnings: 2
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_spi_module 
+# Start time: 15:21:48 on Jan 17,2024
+# Loading sv_std.std
+# Loading work.tb_spi_module
+# Loading work.spi_module
+# Loading work.adc
+# ** Warning: (vsim-3017) ../tb/tb_spi_module.sv(22): [TFMPC] - Too few port connections. Expected 12, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_spi_module/uut File: ../src/spi_module.sv
+# ** Warning: (vsim-3722) ../tb/tb_spi_module.sv(22): [TFMPC] - Missing connection for port 'I_data_in'.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 100us
+# End time: 15:22:01 on Jan 17,2024, Elapsed time: 0:00:13
+# Errors: 0, Warnings: 2

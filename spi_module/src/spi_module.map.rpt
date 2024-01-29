@@ -1,0 +1,366 @@
+Analysis & Synthesis report for spi_module
+Wed Jan 17 11:42:13 2024
+Quartus Prime Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Inverted Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Port Connectivity Checks: "adc:adc_inst"
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                               ;
++---------------------------------+----------------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed Jan 17 11:42:13 2024                    ;
+; Quartus Prime Version           ; 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition ;
+; Revision Name                   ; spi_module                                               ;
+; Top-level Entity Name           ; spi_module                                               ;
+; Family                          ; Cyclone V                                                ;
+; Logic utilization (in ALMs)     ; N/A                                                      ;
+; Total registers                 ; 21                                                       ;
+; Total pins                      ; 18                                                       ;
+; Total virtual pins              ; 0                                                        ;
+; Total block memory bits         ; 0                                                        ;
+; Total DSP Blocks                ; 0                                                        ;
+; Total HSSI RX PCSs              ; 0                                                        ;
+; Total HSSI PMA RX Deserializers ; 0                                                        ;
+; Total HSSI TX PCSs              ; 0                                                        ;
+; Total HSSI PMA TX Serializers   ; 0                                                        ;
+; Total PLLs                      ; 0                                                        ;
+; Total DLLs                      ; 0                                                        ;
++---------------------------------+----------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
+; Top-level entity name                                                           ; spi_module         ; spi_module         ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                            ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                        ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------+---------+
+; spi_module.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/germa/Desktop/spi_module/src/spi_module.sv ;         ;
+; adc.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/germa/Desktop/spi_module/src/adc.sv        ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------+---------+
+
+
++-------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                 ;
++---------------------------------------------+---------------+
+; Resource                                    ; Usage         ;
++---------------------------------------------+---------------+
+; Estimate of Logic utilization (ALMs needed) ; 16            ;
+;                                             ;               ;
+; Combinational ALUT usage for logic          ; 23            ;
+;     -- 7 input functions                    ; 1             ;
+;     -- 6 input functions                    ; 8             ;
+;     -- 5 input functions                    ; 1             ;
+;     -- 4 input functions                    ; 3             ;
+;     -- <=3 input functions                  ; 10            ;
+;                                             ;               ;
+; Dedicated logic registers                   ; 21            ;
+;                                             ;               ;
+; I/O pins                                    ; 18            ;
+;                                             ;               ;
+; Total DSP Blocks                            ; 0             ;
+;                                             ;               ;
+; Maximum fan-out node                        ; I_tx_en~input ;
+; Maximum fan-out                             ; 23            ;
+; Total fan-out                               ; 224           ;
+; Average fan-out                             ; 2.80          ;
++---------------------------------------------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |spi_module                ; 23 (23)             ; 21 (21)                   ; 0                 ; 0          ; 18   ; 0            ; |spi_module         ; spi_module  ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 21    ;
+; Number of registers using Synchronous Clear  ; 15    ;
+; Number of registers using Synchronous Load   ; 1     ;
+; Number of registers using Asynchronous Clear ; 21    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 17    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; O_spi_cs~reg0                          ; 1       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |spi_module|O_tx_done~reg0 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adc:adc_inst"                                                                                                                                  ;
++---------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                      ;
++---------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; I_clk   ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; I_rst_n ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; I_tx_en ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++---------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 21                          ;
+;     CLR               ; 3                           ;
+;     CLR SLD           ; 1                           ;
+;     ENA CLR           ; 2                           ;
+;     ENA CLR SCLR      ; 15                          ;
+; arriav_lcell_comb     ; 24                          ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 23                          ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 4                           ;
+;         4 data inputs ; 3                           ;
+;         5 data inputs ; 1                           ;
+;         6 data inputs ; 8                           ;
+; boundary_port         ; 18                          ;
+;                       ;                             ;
+; Max LUT depth         ; 1.00                        ;
+; Average LUT depth     ; 0.90                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.1.1 Internal Build 593 12/11/2017 SJ Standard Edition
+    Info: Processing started: Wed Jan 17 11:41:51 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off spi_module -c spi_module
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file spi_module.sv
+    Info (12023): Found entity 1: spi_module File: C:/Users/germa/Desktop/spi_module/src/spi_module.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file adc.sv
+    Info (12023): Found entity 1: adc File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 1
+Info (12127): Elaborating entity "spi_module" for the top level hierarchy
+Info (12128): Elaborating entity "adc" for hierarchy "adc:adc_inst" File: C:/Users/germa/Desktop/spi_module/src/spi_module.sv Line: 191
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(11): object "reg_06_adress" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 11
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(12): object "reg_06_data" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 12
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(14): object "reg_07_adress" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 14
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(15): object "reg_07_data" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 15
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(17): object "reg_08_adress" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 17
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(18): object "reg_08_data" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 18
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(20): object "reg_0B_adress" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 20
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(21): object "reg_0B_data" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 21
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(23): object "reg_0C_adress" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 23
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(24): object "reg_0C_data" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 24
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(26): object "reg_0D_adress" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 26
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(27): object "reg_0D_data" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 27
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(29): object "reg_0F_adress" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 29
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(30): object "reg_0F_data" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 30
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(32): object "reg_10_adress" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 32
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(33): object "reg_10_data" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 33
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(35): object "reg_11_adress" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 35
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(36): object "reg_11_data" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 36
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(38): object "reg_12_adress" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 38
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(39): object "reg_12_data" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 39
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(41): object "reg_13_adress" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 41
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(42): object "reg_13_data" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 42
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(44): object "reg_14_adress" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 44
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(45): object "reg_14_data" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 45
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(47): object "reg_15_adress" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 47
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(48): object "reg_15_data" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 48
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(50): object "reg_16_adress" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 50
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(51): object "reg_16_data" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 51
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(53): object "reg_17_adress" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 53
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(54): object "reg_17_data" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 54
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(56): object "reg_18_adress" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 56
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(57): object "reg_18_data" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 57
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(59): object "reg_1F_adress" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 59
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(60): object "reg_1F_data" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 60
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(62): object "reg_20_adress" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 62
+Warning (10036): Verilog HDL or VHDL warning at adc.sv(63): object "reg_20_data" assigned a value but never read File: C:/Users/germa/Desktop/spi_module/src/adc.sv Line: 63
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 41 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 13 output pins
+    Info (21061): Implemented 23 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 38 warnings
+    Info: Peak virtual memory: 4806 megabytes
+    Info: Processing ended: Wed Jan 17 11:42:13 2024
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:46
+
+

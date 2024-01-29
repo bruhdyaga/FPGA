@@ -1,0 +1,82 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/germa/Desktop/spi_module/sim
+vadc
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1705494106
+!i10b 1
+!s100 nl2ekmEP2B7j4EaCozhk82
+I7^SbR6SnCENQ=_F_0g8Q<3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 adc_sv_unit
+S1
+R0
+w1705491078
+8../src/adc.sv
+F../src/adc.sv
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1705494106.000000
+!s107 ../src/adc.sv|
+!s90 -reportprogress|300|-sv|../src/adc.sv|
+!i113 1
+o-sv
+Z6 tCvgOpt 0
+vspi_module
+R1
+R2
+!i10b 1
+!s100 4GJkH7FFkC=_LiX<864h90
+Iz_LgW`;X82JmLY5QTRn:l1
+R3
+!s105 spi_module_sv_unit
+S1
+R0
+w1705494096
+8../src/spi_module.sv
+F../src/spi_module.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 ../src/spi_module.sv|
+!s90 -reportprogress|300|-sv|../src/spi_module.sv|
+!i113 1
+o-sv
+R6
+vtb_spi_module
+R1
+R2
+!i10b 1
+!s100 9;5NJlT2MBX`fR@c`e<Eo2
+IzFKCBbkY23^mo=bdDcB>T0
+R3
+!s105 tb_spi_module_sv_unit
+S1
+R0
+w1705492395
+8../tb/tb_spi_module.sv
+F../tb/tb_spi_module.sv
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+!s107 ../tb/tb_spi_module.sv|
+!s90 -reportprogress|300|-sv|../tb/tb_spi_module.sv|
+!i113 1
+o-sv
+R6

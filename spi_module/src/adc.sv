@@ -3,11 +3,13 @@ module adc
         input I_clk, // 50 MHz
         input I_rst_n, 
         input I_tx_en, // flag to begin transmission
+        input logic O_spi_sck,
+        input O_tx_done,
 
         output logic [7:0] I_data_in // data to transmit to spi_module
 );
 
-//Regs to tune
+//names of registers to tune
 logic [7:0] reg_06_adress;
 logic [7:0] reg_06_data  ;
 
@@ -62,12 +64,13 @@ logic [7:0] reg_1F_data  ;
 logic [7:0] reg_20_adress;
 logic [7:0] reg_20_data  ;
 
+// here you can tune registers
 initial begin
-    reg_06_adress <= 8'b1_0_0_0_0_0_0_1;
-    reg_06_data   <= 8'b0_0_0_0_0_1_1_1;
+    reg_06_adress <= 8'b0_0_0_0_0_0_0_1;
+    reg_06_data   <= 8'b0_0_0_0_0_0_1_0;
 
-    reg_07_adress <= 8'b1_0_0_0_0_0_0_1;
-    reg_07_data   <= 8'b0_0_0_0_0_1_1_1;
+    reg_07_adress <= 8'b0_0_0_0_0_0_1_1;
+    reg_07_data   <= 8'b0_1_0_1_0_1_0_1;
 
     reg_08_adress <= 8'b1_0_0_0_0_0_0_1;
     reg_08_data   <= 8'b0_0_0_0_0_1_1_1;
@@ -119,9 +122,8 @@ initial begin
 end
 
 logic [6:0] state; 
-logic R_rx_state;
  
-always @(posedge I_clk or negedge I_rst_n)
+always @(posedge O_tx_done or negedge I_rst_n)
 begin
 
     if(!I_rst_n)
@@ -130,7 +132,7 @@ begin
         end 
 
         else if (I_tx_en )begin
-				  
+
         case (state) // all registers from reg. map one by one writing to I_data_in
 
                 6'd0:
@@ -378,17 +380,9 @@ begin
                     state <= state + 1'b1;                    
                 end
 
-                6'd35:
-
-                begin
-                    I_data_in <= reg_20_data;
-                    state <= state + 1'b1;                   
-                end
-              
 				default: state <= 6'd0;
 
-        endcase			
+        endcase	
+        end		
         end
-end
-
 endmodule

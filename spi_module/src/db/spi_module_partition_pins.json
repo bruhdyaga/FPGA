@@ -1,0 +1,81 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "O_data_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "O_data_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "O_data_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "O_data_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "O_data_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "O_data_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "O_data_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "O_data_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "O_tx_done",
+					"strict" : false
+				},
+				{
+					"name" : "O_rx_done",
+					"strict" : false
+				},
+				{
+					"name" : "O_spi_sck",
+					"strict" : false
+				},
+				{
+					"name" : "O_spi_cs",
+					"strict" : false
+				},
+				{
+					"name" : "O_spi_mosi",
+					"strict" : false
+				},
+				{
+					"name" : "I_clk",
+					"strict" : false
+				},
+				{
+					"name" : "I_spi_miso",
+					"strict" : false
+				},
+				{
+					"name" : "I_rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "I_rx_en",
+					"strict" : false
+				},
+				{
+					"name" : "I_tx_en",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
