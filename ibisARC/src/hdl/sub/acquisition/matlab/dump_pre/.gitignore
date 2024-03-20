@@ -1,0 +1,3 @@
+# Always ignore journal and log files
+*.txt
+*.asv

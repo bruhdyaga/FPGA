@@ -1,0 +1,5 @@
+/uart/
+/tmp_compile/
+
+*.wlf
+*.vstf

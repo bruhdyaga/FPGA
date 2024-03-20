@@ -1,0 +1,10 @@
+*/tb
+*/tmp
+*/inc
+modelsim.ini
+*.wlf
+transcript
+vlog.opt
+compile.tcl
+test.log
+

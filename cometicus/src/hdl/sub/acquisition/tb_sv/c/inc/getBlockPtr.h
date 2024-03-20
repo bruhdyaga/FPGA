@@ -1,0 +1,1 @@
+void * getBlockPtr(unsigned int addr, unsigned int size, unsigned int *offset);

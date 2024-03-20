@@ -1,0 +1,10 @@
+/interfaces/
+/tmp_compile/
+/axi4lite_interface_tb/
+/cpu_lib/
+
+*.wlf
+wlft*
+
+cpu_sim.h
+transcript

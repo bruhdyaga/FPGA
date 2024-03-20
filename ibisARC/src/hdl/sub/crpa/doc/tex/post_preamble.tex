@@ -1,0 +1,68 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%   Copyright  2015  SRNS.RU Team                                              %%%
+%%%      _______. .______     .__   __.      ___ ____.    .______      __    __  %%%
+%%%     /       | |   _  \    |  \ |  |     /       |     |   _  \    |  |  |  | %%%
+%%%    |   (----` |  |_)  |   |   \|  |    |   (----`     |  |_)  |   |  |  |  | %%%
+%%%     \   \     |      /    |  . `  |     \   \         |      /    |  |  |  | %%%
+%%% .----)   |    |  |\  \--. |  |\   | .----)   |    __  |  |\  \--. |  `--'  | %%%
+%%% |_______/     | _| `.___| |__| \__| |_______/    (__) | _| `.___|  \______/  %%%
+%%%                                                                              %%%
+%%%   Boldenkov E., Korogodin I.                                                 %%%
+%%%                                                                              %%%
+%%%   Licensed under the Apache License, Version 2.0 (the "License");            %%%
+%%%   you may not use this file except in compliance with the License.           %%%
+%%%   You may obtain a copy of the License at                                    %%%
+%%%                                                                              %%%
+%%%       http://www.apache.org/licenses/LICENSE-2.0                             %%%
+%%%                                                                              %%%
+%%%   Unless required by applicable law or agreed to in writing, software        %%%
+%%%   distributed under the License is distributed on an "AS IS" BASIS,          %%%
+%%%   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.   %%%
+%%%   See the License for the specific language governing permissions and        %%%
+%%%   limitations under the License.                                             %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ifdefined\PostPreamble       % Ну все понимают, о чём речь
+\else
+\newcommand*{\PostPreamble}{}
+
+%\setlength{parindent}{0pt} 
+%\setlength{parskip}{1ex plus 0.5ex minus 0.2ex}
+\parindent=0pt 
+\parskip=1.3ex
+\newcommand{\horline}{\rule{\textwidth}{1pt}}
+\newcommand{\inv}[1]{\mbox{$\overline{\textrm{{#1}}}$}}
+\newcommand{\regnam}{}
+
+% Отображение некоторых математических функций, отличающихся от западных
+\newcommand{\sinc}{\mathop{\rm sinc}\nolimits}     
+\newcommand{\sign}{\mathop{\rm sign}\nolimits}
+\renewcommand{\th}{\mathop{\rm th}\nolimits}
+\renewcommand{\sh}{\mathop{\rm sh}\nolimits}
+\renewcommand{\ch}{\mathop{\rm ch}\nolimits}
+\renewcommand{\arctg}{\mathop{\rm arctg}\nolimits}
+\renewcommand{\arcsin}{\mathop{\rm arcsin}\nolimits}
+\renewcommand{\arccos}{\mathop{\rm arccos}\nolimits}
+\renewcommand{\lg}{\mathop{\rm lg}\nolimits}
+\renewcommand{\ln}{\mathop{\rm ln}\nolimits}
+
+% Использование русских букв для нумерации разделов, если нужно
+\renewcommand{\theenumii}{\asbuk{enumii}}
+\renewcommand{\labelenumii}{\theenumii.}
+% Переопределение нумерации в приложениях на буквенную
+\makeatletter
+\renewcommand\appendix{\par
+  \setcounter{chapter}{0}
+  \setcounter{section}{0}%
+  \setcounter{subsection}{0}%
+%  \gdef\thechapter{\@Asbuk\c@chapter}}
+%  \gdef\thechapter{\@Roman\c@chapter }}
+  \gdef\thesection{\@Roman\c@section}}
+%  \gdef\thesection{Лекция \@Roman\c@section}
+\makeatother
+
+\fi
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 

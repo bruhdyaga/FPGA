@@ -1,0 +1,9 @@
+[submodule "sub/correlator"]
+	path = sub/correlator
+	url = ssh://git@srns.ru:221/git/correlator
+[submodule "sub/sync"]
+	path = sub/sync
+	url = ssh://git@srns.ru:221/git/sync
+[submodule "sub/dsp"]
+	path = sub/dsp
+	url = ssh://git@srns.ru:221/git/dsp

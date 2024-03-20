@@ -1,0 +1,249 @@
+`include "global_param.v"
+`include "macro.svh"
+
+module acp_test
+#(
+    parameter BASEADDR = 0
+)
+(
+    intbus_interf.slave   bus,
+    axi4_interface.master axi_acp
+);
+
+localparam NBUSES        = 2;
+localparam MAX_ARLEN     = 15; // maximum for AXI3 (from 0)
+localparam ACP_AXSIZE    = $clog2(`AXI_ACP_WIDTH/8);
+localparam AXI_GP_AXSIZE = $clog2(`AXI_GP_WIDTH/8);
+localparam PACK_SIZE     = 2**(ACP_AXSIZE - AXI_GP_AXSIZE); // количество AXI_GP-транзакций в одной ACP-транзакции
+
+wire [2:0]  ARSIZE; // mux between full ACP-width and AXI_GP-width
+wire [3:0]  ARLEN;
+wire [15:0] left_rd; // осталось прочесть слов по шине AXI_GP
+
+reg [1:0][31:0] fifo [1:0]; // глубина 2 ячейки; каждая два регистра по 32 бита {[HI] [LO]}
+
+intbus_interf bus_sl[NBUSES]();
+
+connectbus#(
+    .BASEADDR   (BASEADDR),
+    .N_BUSES    (NBUSES),
+    .OUTFF      ("n"),
+    .MASTERFF   ("n")
+) connectbus_inst(
+    .master_bus (bus),
+    .slave_bus  (bus_sl)
+);
+
+//-----------------------
+
+typedef struct packed {
+    logic [31:2]  ADDR;
+    logic [1:1]   RESERVED;
+    logic [0:0]   START;
+} ACP_ADDR_STRUCT;
+
+typedef struct packed { // 0x40000334
+    ACP_ADDR_STRUCT     AXADDR;             // + 0x4                          // start addr 1-Byte
+    logic [31:16]       RESERVED;
+    logic [15:0]        RD_SIZE; // from 0  // + 0x8 (in AXI_GP-width size)   // 0 == one transaction
+} ACP_TEST_STRUCT;
+
+localparam ACP_TEST_STRUCT_SIZE      = (`size32(ACP_TEST_STRUCT));
+localparam ACP_TEST_STRUCT_FULL_SIZE = (ACP_TEST_STRUCT_SIZE + `RWREGSSIZE);
+
+ACP_TEST_STRUCT PL;
+ACP_TEST_STRUCT PS;
+
+//Define which bits will be pulsed
+localparam NPULSE = 1;
+localparam integer PULSE [NPULSE][2] = '{
+    '{0, 0} // ARVALID_PULSE //{reg,bit}
+};
+
+localparam BASEREG = BASEADDR + `HUBSIZE;
+regs_file#(
+    .BASEADDR (BASEREG),
+    .ID       (16'hFFAB),
+    .DATATYPE (ACP_TEST_STRUCT),
+    .NPULSE   (NPULSE),
+    .PULSE    (PULSE)
+)RF (
+    .clk    (bus.clk),
+    .bus    (bus_sl[0]),
+    .in     (PL),
+    .out    (PS),
+    .pulse  (start_pulse),
+    .wr     (),
+    .rd     ()
+);
+
+assign PL.AXADDR.ADDR     = PS.AXADDR.ADDR;
+assign PL.AXADDR.RESERVED = '0;
+assign PL.AXADDR.START    = '0;
+assign PL.RESERVED        = '0;
+assign PL.RD_SIZE         = PS.RD_SIZE;
+
+// ##############################
+
+localparam N_REGS = 50;
+typedef struct packed {
+    logic [0:N_REGS-1][31:0] REG_RO;
+} ACP_TEST_RW_STRUCT;
+
+ACP_TEST_RW_STRUCT PL2;
+ACP_TEST_RW_STRUCT PS2;
+
+localparam BASEREG2 = BASEREG + ACP_TEST_STRUCT_FULL_SIZE;
+regs_file#(
+    .BASEADDR (BASEREG2),
+    .ID       (16'hABCD),
+    .DATATYPE (ACP_TEST_RW_STRUCT)
+)RF2 (
+    .clk    (),
+    .bus    (bus_sl[1]),
+    .in     (PL2),
+    .out    (PS2),
+    .pulse  (),
+    .wr     (),
+    .rd     ()
+);
+
+for(genvar i = 0; i < N_REGS; i = i + 1) begin
+    assign PL2.REG_RO[i] = i;
+end
+
+// ##############################
+
+reg [15:0] addr_4B; // 4-byte addr (one step = 4 bytes) // max width = bus_4B_width
+reg [15:0] addr_4B_inc; // прибавка к адресу
+wire awbusy;
+
+assign axi_ar     = axi_acp.arvalid & axi_acp.arready & axi_acp.awready;
+assign axi_rlast  = axi_acp.rlast & axi_acp.rready;
+assign axi_wlast  = axi_acp.wvalid & axi_acp.wlast & axi_acp.wready;
+assign last_trans = (PS.RD_SIZE + 1 - addr_4B - addr_4B_inc) == 0;
+// assign full_acp   = ((PS.RD_SIZE - addr_4B) + 1) >= PACK_SIZE; // ACP проводит транзацию на всю свою ширину
+assign full_acp   = 0; // ACP проводит транзацию на ширину AXI_GP
+
+reg arvalid_reg;
+always_ff@(posedge bus.clk)
+if(axi_ar) begin
+    if(last_trans) begin
+        arvalid_reg <= '0;
+    end
+end else begin
+    if(start_pulse) begin
+        arvalid_reg <= '1;
+    end
+end
+
+
+assign addr_4B_inc = (axi_acp.arlen + 1) * (2**(ARSIZE - AXI_GP_AXSIZE));
+
+always_ff@(posedge bus.clk)
+if(start_pulse) begin
+    addr_4B <= '0;
+end else begin
+    if(axi_ar) begin
+        addr_4B <= addr_4B + addr_4B_inc;
+    end
+end
+
+enum logic [1:0] {FIXED  = 2'b00,
+                  INCR   = 2'b01,
+                  WRAP   = 2'b10} BURST_TYPE;
+                  
+enum logic [3:0] {DEV_NBUF        = 4'b0000,
+                  DEV_BUF         = 4'b0001,
+                  NORM_NCACH_NBUF = 4'b0010,
+                  NORM_NCACH_BUF  = 4'b0011} AxCACHE;
+
+enum logic [0:0] {NORM_ACCESS = 1'b0,
+                  EXCL_ACCESS = 1'b1} AxLOCK;
+
+assign ARSIZE = full_acp ? ACP_AXSIZE : AXI_GP_AXSIZE;
+assign left_rd = PS.RD_SIZE - addr_4B;
+// assign ARLEN  = ((PS.RD_SIZE - addr_4B) + 1) / PACK_SIZE - 1;
+assign ARLEN  = (left_rd > MAX_ARLEN) ? MAX_ARLEN : left_rd;
+
+// READ
+assign axi_acp.araddr  = {PS.AXADDR.ADDR,2'b00} + (addr_4B << 2);
+assign axi_acp.arburst = INCR;
+// assign axi_acp.arcache = NORM_NCACH_NBUF;
+assign axi_acp.arcache = DEV_NBUF;
+assign axi_acp.arid    = '0;
+// assign axi_acp.arlen   = full_acp ? ARLEN : 0/* PS.RD_SIZE - addr_4B */; // Burst in transfer (from 0) // это верно для PACK_SIZE<=2
+assign axi_acp.arlen   = ARLEN; // Burst in transfer
+assign axi_acp.arlock  = NORM_ACCESS;
+assign axi_acp.arprot  = '0; // Unprivileged access|Secure access|Data access
+assign axi_acp.arqos   = '0;
+assign axi_acp.arsize  = ARSIZE; // Bytes in transfer 2**x
+assign axi_acp.aruser  = '0;
+assign axi_acp.arvalid = arvalid_reg & !awbusy;
+assign axi_acp.rready  = axi_acp.wready;
+
+// WRITE
+assign axi_acp.awaddr  = `OCM_BASE_ADDR + (addr_4B << 2);
+assign axi_acp.awburst = INCR;
+// assign axi_acp.awcache = NORM_NCACH_NBUF;
+assign axi_acp.awcache = DEV_NBUF;
+assign axi_acp.awid    = '0;
+assign axi_acp.awlen   = axi_acp.arlen;
+assign axi_acp.awlock  = NORM_ACCESS;
+assign axi_acp.awprot  = '0; // Unprivileged access|Secure access|Data access
+assign axi_acp.awqos   = '0;
+assign axi_acp.awsize  = ARSIZE; // Bytes in transfer 2**x
+assign axi_acp.awuser  = '0;
+assign axi_acp.awvalid = axi_acp.arvalid;
+
+assign axi_acp.bready  = '1;
+
+assign axi_acp.wdata   = axi_acp.rdata;
+assign axi_acp.wid     = '0;
+assign axi_acp.wlast   = axi_rlast;
+assign axi_acp.wvalid  = axi_acp.rvalid;
+
+
+reg [`AXI_ACP_WIDTH/8-1:0] wstrb [1:0];
+reg       wstrb_cntr_wr;
+reg       wstrb_cntr_rd;
+reg [1:0] wstrb_cntr; // объем записанных wstrb
+
+always_ff@(posedge bus.clk)
+if(start_pulse) begin
+    wstrb_cntr <= '0;
+end else begin
+    case({axi_ar,axi_wlast})
+        2'b10: wstrb_cntr <= wstrb_cntr + 1'b1;
+        2'b01: wstrb_cntr <= wstrb_cntr - 1'b1;
+    endcase
+end
+
+assign awbusy = wstrb_cntr == 2;
+
+always_ff@(posedge bus.clk)
+if(start_pulse) begin
+    wstrb_cntr_wr <= '0;
+end else begin
+    if(axi_ar) begin
+        wstrb_cntr_wr <= wstrb_cntr_wr + 1'b1;
+    end
+end
+
+always_ff@(posedge bus.clk)
+if(start_pulse) begin
+    wstrb_cntr_rd <= '0;
+end else begin
+    if(axi_wlast) begin
+        wstrb_cntr_rd <= wstrb_cntr_rd + 1'b1;
+    end
+end
+
+always_ff@(posedge bus.clk)
+if(axi_ar) begin
+    wstrb[wstrb_cntr_wr] <= (1 << (2**axi_acp.awsize)) - 1;
+end
+
+assign axi_acp.wstrb = wstrb[wstrb_cntr_rd];
+
+endmodule

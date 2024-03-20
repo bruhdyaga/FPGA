@@ -1,0 +1,78 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/User/Desktop/misc-main/cometicus/prj/cometicus/cometicus.sim/sim_1/behav/modelsim
+vaxi_infrastructure_v1_1_0_axi2vector
+Z1 !s110 1710919378
+!i10b 1
+!s100 WaMXR;@PoESl_J13P]nKV2
+InnS]nA>@b8MJLLkHkiT0h2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1710917894
+Z4 8../../../../clonicus/zynq/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v
+Z5 F../../../../clonicus/zynq/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v
+Z6 F../../../../clonicus/zynq/ipshared/ec67/hdl/axi_infrastructure_v1_1_0.vh
+L0 60
+Z7 OL;L;10.6d;65
+r1
+!s85 0
+31
+Z8 !s108 1710919378.000000
+!s107 ../../../../clonicus/zynq/ipshared/ec67/hdl/axi_infrastructure_v1_1_0.vh|C:\Users\User\Desktop\misc-main\cometicus\src\hdl\misc\board_param.v|../../../../clonicus/zynq/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v|C:/Users/User/Desktop/misc-main/cometicus/src/hdl/misc/global_param.v|C:/Users/User/Desktop/misc-main/cometicus/src/hdl/misc/board_param.v|
+Z9 !s90 -64|-incr|-work|axi_infrastructure_v1_1_0|C:/Users/User/Desktop/misc-main/cometicus/src/hdl/misc/board_param.v|C:/Users/User/Desktop/misc-main/cometicus/src/hdl/misc/global_param.v|+incdir+../../../../clonicus/zynq/ipshared/ec67/hdl|+incdir+../../../../clonicus/zynq/ipshared/02c8/hdl/verilog|+incdir+../../../../clonicus/zynq/ipshared/b193/hdl|+incdir+../../../../../../src/hdl/sub/dsp/verilog|+incdir+../../../../../../src/hdl/sub/acquisition/verilog_sv|+incdir+../../../../../../src/hdl/sub/interfaces|+incdir+../../../../../../src/hdl/sub/correlator_new/verilog|+incdir+../../../../../../src/hdl/sub/debug/verilog_sv|+incdir+../../../../../../src/hdl/sub/dsp/verilog_sv|+incdir+../../../../../../src/hdl/sub/imitator/verilog|+incdir+../../../../../../src/hdl/trcv|+incdir+../../../../../../src/hdl/sub/uart/rtl|+incdir+D:/Xlinx/Vivado/2018.1/data/xilinx_vip/include|../../../../clonicus/zynq/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v|
+!i113 0
+Z10 o-work axi_infrastructure_v1_1_0 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z11 !s92 -work axi_infrastructure_v1_1_0 +incdir+../../../../clonicus/zynq/ipshared/ec67/hdl +incdir+../../../../clonicus/zynq/ipshared/02c8/hdl/verilog +incdir+../../../../clonicus/zynq/ipshared/b193/hdl +incdir+../../../../../../src/hdl/sub/dsp/verilog +incdir+../../../../../../src/hdl/sub/acquisition/verilog_sv +incdir+../../../../../../src/hdl/sub/interfaces +incdir+../../../../../../src/hdl/sub/correlator_new/verilog +incdir+../../../../../../src/hdl/sub/debug/verilog_sv +incdir+../../../../../../src/hdl/sub/dsp/verilog_sv +incdir+../../../../../../src/hdl/sub/imitator/verilog +incdir+../../../../../../src/hdl/trcv +incdir+../../../../../../src/hdl/sub/uart/rtl +incdir+D:/Xlinx/Vivado/2018.1/data/xilinx_vip/include -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z12 tCvgOpt 0
+vaxi_infrastructure_v1_1_0_axic_srl_fifo
+R1
+!i10b 1
+!s100 R4C99OY:fE[Udm4=iTUPm2
+I7FJ6zSgUN`@SW@MnzOQ>k3
+R2
+R0
+R3
+R4
+R5
+L0 287
+R7
+r1
+!s85 0
+31
+R8
+Z13 !s107 ../../../../clonicus/zynq/ipshared/ec67/hdl/axi_infrastructure_v1_1_0.vh|C:\Users\User\Desktop\misc-main\cometicus\src\hdl\misc\board_param.v|../../../../clonicus/zynq/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v|C:/Users/User/Desktop/misc-main/cometicus/src/hdl/misc/global_param.v|C:/Users/User/Desktop/misc-main/cometicus/src/hdl/misc/board_param.v|
+R9
+!i113 0
+R10
+R11
+R12
+vaxi_infrastructure_v1_1_0_vector2axi
+R1
+!i10b 1
+!s100 ]oFKHLYkl0AB9<ZRAM^B70
+IdhbNl<DAilURQk<f7A5TM3
+R2
+R0
+R3
+R4
+R5
+R6
+L0 474
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 0
+R10
+R11
+R12

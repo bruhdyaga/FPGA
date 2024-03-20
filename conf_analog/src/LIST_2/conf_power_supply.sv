@@ -1,14 +1,13 @@
 module conf_power_supply (
 
 input clk,
-input rst,
 output POWER_R&T_ON/OFF,
 output PWR_SYNC_A1,
 output PWR_SYNC_D1
     
 );
 
-always @(posedge clk or negedge rst)
+always @(posedge clk)
 
 begin
     if(!rst)

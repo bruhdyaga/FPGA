@@ -38,22 +38,18 @@ module LVDS_capture(
    .SRTYPE("SYNC") 
     )
     IDDR_inst (
-   .Q1(iddr_data_even[i]), // 1-bit output for positive edge of clock
-   .Q2(iddr_data_odd[i]), // 1-bit output for negative edge of clock
-   .C(clk),   // 1-bit clock input
-   .CE(1'b1), // 1-bit clock enable input
-   .D(data[i]),   // 1-bit DDR data input
-   .R(1'b0),   // 1-bit reset
-   .S(rst)    // 1-bit set
+   .Q1(iddr_data_even[i]),  // 1-bit output for positive edge of clock
+   .Q2(iddr_data_odd[i]),   // 1-bit output for negative edge of clock
+   .C(clk),                 // 1-bit clock input
+   .CE(1'b1),               // 1-bit clock enable input
+   .D(data[i]),             // 1-bit DDR data input
+   .R(1'b0),                // 1-bit reset
+   .S(rst)                  // 1-bit set
     );
     				     
 	end				
 	endgenerate
 	
-	
-	
-
-
 	
     always @(posedge clk or posedge rst) begin
     

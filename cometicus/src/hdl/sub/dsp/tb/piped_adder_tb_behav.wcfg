@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="piped_adder_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="piped_adder_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="914047619fs"></ZoomStartTime>
+      <ZoomEndTime time="1017190477fs"></ZoomEndTime>
+      <Cursor1Time time="1000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <WVObjectSize size="7" />
+   <wave_markers>
+      <marker label="" time="1000000000" />
+      <marker label="" time="2549274510000" />
+   </wave_markers>
+   <wvobject db_ref_id="1" type="logic" fp_name="/piped_adder_tb/pclk">
+      <obj_property name="ElementShortName">pclk</obj_property>
+      <obj_property name="ObjectShortName">pclk</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/piped_adder_tb/reset_n">
+      <obj_property name="ElementShortName">reset_n</obj_property>
+      <obj_property name="ObjectShortName">reset_n</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/piped_adder_tb/we">
+      <obj_property name="ElementShortName">we</obj_property>
+      <obj_property name="ObjectShortName">we</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/piped_adder_tb/valid">
+      <obj_property name="ElementShortName">valid</obj_property>
+      <obj_property name="ObjectShortName">valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/piped_adder_tb/sum">
+      <obj_property name="ElementShortName">sum[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sum[7:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/piped_adder_tb/true_sum">
+      <obj_property name="ElementShortName">true_sum[31:0]</obj_property>
+      <obj_property name="ObjectShortName">true_sum[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/piped_adder_tb/arg">
+      <obj_property name="ElementShortName">arg[8:0][3:0]</obj_property>
+      <obj_property name="ObjectShortName">arg[8:0][3:0]</obj_property>
+   </wvobject>
+</wave_config>

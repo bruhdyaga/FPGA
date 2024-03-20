@@ -1,0 +1,461 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date             : Wed Mar 20 10:07:19 2024
+| Host             : ws2104201823 running 64-bit major release  (build 9200)
+| Command          : report_power -file cometicus_power_routed.rpt -pb cometicus_power_summary_routed.pb -rpx cometicus_power_routed.rpx
+| Design           : cometicus
+| Device           : xc7z045fbg676-2
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 1.913        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 1.682        |
+| Device Static (W)        | 0.231        |
+| Total Off-Chip Power (W) | 0.001        |
+| Effective TJA (C/W)      | 1.9          |
+| Max Ambient (C)          | 81.4         |
+| Junction Temperature (C) | 28.6         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.050 |        7 |       --- |             --- |
+| Slice Logic              |     0.094 |    32646 |       --- |             --- |
+|   LUT as Logic           |     0.071 |    11444 |    218600 |            5.24 |
+|   Register               |     0.012 |    17696 |    437200 |            4.05 |
+|   CARRY4                 |     0.007 |      845 |     54650 |            1.55 |
+|   LUT as Shift Register  |     0.003 |       72 |     70400 |            0.10 |
+|   F7/F8 Muxes            |    <0.001 |      623 |    218600 |            0.28 |
+|   BUFG                   |    <0.001 |        3 |        32 |            9.38 |
+|   LUT as Distributed RAM |    <0.001 |       50 |     70400 |            0.07 |
+|   BUFR                   |     0.000 |        1 |       200 |            0.50 |
+|   Others                 |     0.000 |      667 |       --- |             --- |
+| Signals                  |     0.158 |    25642 |       --- |             --- |
+| Block RAM                |     0.051 |    104.5 |       545 |           19.17 |
+| MMCM                     |     0.105 |        1 |         8 |           12.50 |
+| DSPs                     |     0.020 |        6 |       900 |            0.67 |
+| I/O                      |     0.098 |       66 |       250 |           26.40 |
+| PS7                      |     1.106 |        1 |       --- |             --- |
+| Static Power             |     0.231 |          |           |                 |
+| Total                    |     1.913 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.444 |       0.383 |      0.061 |
+| Vccaux    |       1.800 |     0.108 |       0.067 |      0.040 |
+| Vcco33    |       3.300 |     0.008 |       0.007 |      0.001 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.026 |       0.025 |      0.001 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.010 |       0.004 |      0.006 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.694 |       0.676 |      0.018 |
+| Vccpaux   |       1.800 |     0.021 |       0.011 |      0.010 |
+| Vccpll    |       1.800 |     0.018 |       0.015 |      0.003 |
+| Vcco_ddr  |       1.800 |     0.212 |       0.210 |      0.002 |
+| Vcco_mio0 |       3.300 |     0.001 |       0.000 |      0.001 |
+| Vcco_mio1 |       1.800 |     0.003 |       0.002 |      0.001 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                             |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                                    |
+| Clock nodes activity        | Medium     | More than 5% of clocks are missing user specification  | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
+| Device models               | High       | Device models are Production                           |                                                                                                                    |
+|                             |            |                                                        |                                                                                                                    |
+| Overall confidence level    | Low        |                                                        |                                                                                                                    |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 1.9                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 3.4                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++----------------+---------------------------------------------------------------------------+-----------------+
+| Clock          | Domain                                                                    | Constraint (ns) |
++----------------+---------------------------------------------------------------------------+-----------------+
+| CLKFBOUT       | CLKFBOUT                                                                  |            20.0 |
+| clk_fpga_0     | cpu_top_inst/zynq_inst/processing_system7_0_0/inst/FCLK_CLK0              |            10.0 |
+| clk_fpga_1     | cpu_top_inst/zynq_inst/processing_system7_0_0/inst/FCLK_CLK_unbuffered[1] |            20.0 |
+| core_clk_unbuf | core_clk_unbuf                                                            |            12.0 |
++----------------+---------------------------------------------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++--------------------------------------------------------------+-----------+
+| Name                                                         | Power (W) |
++--------------------------------------------------------------+-----------+
+| cometicus                                                    |     1.682 |
+|   FREQ_COUNTER                                               |     0.004 |
+|     FREQ_CH[0].CLK_MODE.ed_det_start_syn                     |    <0.001 |
+|     FREQ_CH[0].CLK_MODE.level_sync_cntr_high                 |    <0.001 |
+|     FREQ_CH[1].CLK_MODE.ed_det_start_syn                     |    <0.001 |
+|     FREQ_CH[1].CLK_MODE.level_sync_cntr_high                 |    <0.001 |
+|     FREQ_CH[2].CLK_MODE.ed_det_start_syn                     |    <0.001 |
+|     FREQ_CH[2].CLK_MODE.level_sync_cntr_high                 |    <0.001 |
+|     FREQ_CH[3].CLK_MODE.ed_det_start_syn                     |    <0.001 |
+|     FREQ_CH[3].CLK_MODE.level_sync_cntr_high                 |    <0.001 |
+|     FREQ_CH[4].CLK_MODE.ed_det_start_syn                     |    <0.001 |
+|     FREQ_CH[4].CLK_MODE.level_sync_cntr_high                 |    <0.001 |
+|     FREQ_CH[5].PULSE_MODE.ed_det_start_syn_p                 |    <0.001 |
+|     FREQ_CH[5].PULSE_MODE.puls_sync_ed_inst                  |    <0.001 |
+|     FREQ_CH[5].PULSE_MODE.puls_sync_inst                     |    <0.001 |
+|     FREQ_CH[6].PULSE_MODE.puls_sync_ed_inst                  |    <0.001 |
+|     FREQ_CH[6].PULSE_MODE.puls_sync_inst                     |    <0.001 |
+|     FREQ_CH[8].CLK_MODE.ed_det_start_syn                     |    <0.001 |
+|     FREQ_CH[8].CLK_MODE.level_sync_cntr_high                 |    <0.001 |
+|   IOBUF_MEZ1_I2C_SCL_inst                                    |     0.001 |
+|   IOBUF_MEZ1_I2C_SDA_inst                                    |     0.001 |
+|   IOBUF_MEZ1_SPI_2_SDO_inst                                  |     0.001 |
+|   PPS_SYNC                                                   |    <0.001 |
+|   RGB_0                                                      |    <0.001 |
+|     RF                                                       |    <0.001 |
+|   RGB_1                                                      |    <0.001 |
+|     RF                                                       |    <0.001 |
+|   RGB_2                                                      |    <0.001 |
+|     RF                                                       |    <0.001 |
+|   TRCV                                                       |     0.348 |
+|     ACQ_IP                                                   |     0.102 |
+|       DATA_COLLECTOR_NOISE                                   |     0.002 |
+|         RAM_GEN[0].bram_block_v2_inst                        |     0.002 |
+|         RF                                                   |    <0.001 |
+|           WR_GEN[6].PULSING.(null)[0].(null)[0].PULSE_SYNC   |    <0.001 |
+|             ed_det_finish_start_inst                         |    <0.001 |
+|             ed_det_finish_stop_inst                          |    <0.001 |
+|             level_sync_finish_inst                           |    <0.001 |
+|             level_sync_rqst_start_inst                       |    <0.001 |
+|         pipe_line_bus                                        |    <0.001 |
+|       arr_accum_I_kg_inst                                    |     0.002 |
+|         LATENCY_WE_MEM_INST                                  |    <0.001 |
+|         bram_block_v2_inst                                   |     0.002 |
+|       arr_accum_Q_kg_inst                                    |     0.002 |
+|         bram_block_v2_inst                                   |     0.002 |
+|       arr_accum_quad_nkg_inst                                |    <0.001 |
+|         LATENCY_VALID_INST                                   |    <0.001 |
+|         LATENCY_WE_MEM_INST                                  |    <0.001 |
+|         bram_block_v2_inst                                   |    <0.001 |
+|       bram_controller_inst                                   |     0.020 |
+|         bram_block_v2_inst                                   |     0.015 |
+|         regs_file_bram_controller_inst                       |     0.002 |
+|           WR_GEN[0].PULSING.(null)[0].(null)[0].PULSE_SYNC   |    <0.001 |
+|             ed_det_finish_start_inst                         |     0.000 |
+|             ed_det_finish_stop_inst                          |    <0.001 |
+|             level_sync_finish_inst                           |    <0.001 |
+|             level_sync_rqst_start_inst                       |     0.000 |
+|           WR_GEN[0].PULSING.(null)[25].(null)[1].PULSE_SYNC  |    <0.001 |
+|             ed_det_finish_start_inst                         |     0.000 |
+|             ed_det_finish_stop_inst                          |    <0.001 |
+|             level_sync_finish_inst                           |    <0.001 |
+|             level_sync_rqst_start_inst                       |     0.000 |
+|       connectbus_inst                                        |    <0.001 |
+|       core_inst                                              |     0.054 |
+|         SUM_I_INST                                           |     0.018 |
+|           adder_stage[0].ADDER_STAGE                         |     0.006 |
+|           adder_stage[1].ADDER_STAGE                         |     0.004 |
+|           adder_stage[2].ADDER_STAGE                         |     0.003 |
+|           adder_stage[3].ADDER_STAGE                         |     0.002 |
+|           adder_stage[4].ADDER_STAGE                         |     0.001 |
+|           adder_stage[5].ADDER_STAGE                         |    <0.001 |
+|           adder_stage[6].ADDER_STAGE                         |    <0.001 |
+|           adder_stage[7].ADDER_STAGE                         |    <0.001 |
+|         SUM_Q_INST                                           |     0.018 |
+|           adder_stage[0].ADDER_STAGE                         |     0.006 |
+|           adder_stage[1].ADDER_STAGE                         |     0.004 |
+|           adder_stage[2].ADDER_STAGE                         |     0.003 |
+|           adder_stage[3].ADDER_STAGE                         |     0.002 |
+|           adder_stage[4].ADDER_STAGE                         |     0.001 |
+|           adder_stage[5].ADDER_STAGE                         |    <0.001 |
+|           adder_stage[6].ADDER_STAGE                         |    <0.001 |
+|           adder_stage[7].ADDER_STAGE                         |    <0.001 |
+|       facq_prn_gen_inst                                      |    <0.001 |
+|       facq_prn_ram_inst                                      |     0.002 |
+|         RF                                                   |    <0.001 |
+|         bram_block_v2_inst                                   |     0.001 |
+|       freq_shift_inst                                        |    <0.001 |
+|         DDS_sin_cos_inst                                     |    <0.001 |
+|       fsm_controller_inst                                    |     0.004 |
+|         acq_global_resetp_core_inst                          |    <0.001 |
+|           ed_det_finish_start_inst                           |    <0.001 |
+|           ed_det_finish_stop_inst                            |    <0.001 |
+|           level_sync_finish_inst                             |    <0.001 |
+|           level_sync_rqst_start_inst                         |    <0.001 |
+|         ed_det_core_resetp_fsm_late                          |    <0.001 |
+|         regs_file_fsm_controller_inst                        |     0.002 |
+|           WR_GEN[3].PULSING.(null)[0].(null)[0].PULSE_SYNC   |    <0.001 |
+|             ed_det_finish_start_inst                         |    <0.001 |
+|             ed_det_finish_stop_inst                          |    <0.001 |
+|             level_sync_finish_inst                           |    <0.001 |
+|             level_sync_rqst_start_inst                       |    <0.001 |
+|           WR_GEN[3].PULSING.(null)[1].(null)[1].PULSE_SYNC   |    <0.001 |
+|             ed_det_finish_start_inst                         |    <0.001 |
+|             ed_det_finish_stop_inst                          |    <0.001 |
+|             level_sync_finish_inst                           |    <0.001 |
+|             level_sync_rqst_start_inst                       |    <0.001 |
+|           WR_GEN[3].PULSING.(null)[31].(null)[3].PULSE_SYNC  |    <0.001 |
+|             ed_det_finish_start_inst                         |    <0.001 |
+|             ed_det_finish_stop_inst                          |    <0.001 |
+|             level_sync_finish_inst                           |    <0.001 |
+|             level_sync_rqst_start_inst                       |    <0.001 |
+|           WR_GEN[3].PULSING.(null)[3].(null)[2].PULSE_SYNC   |    <0.001 |
+|             ed_det_finish_start_inst                         |    <0.001 |
+|             ed_det_finish_stop_inst                          |    <0.001 |
+|             level_sync_finish_inst                           |    <0.001 |
+|             level_sync_rqst_start_inst                       |    <0.001 |
+|       max_args                                               |     0.002 |
+|         LATENCY_WE_MEM_INST                                  |    <0.001 |
+|         conv_reg_freq_cntr_inst                              |    <0.001 |
+|         conv_reg_tau_cntr_inst                               |    <0.001 |
+|       prestore_inst                                          |     0.006 |
+|         DDS_bin_inst                                         |     0.001 |
+|           regs_file_dds_bin_inst                             |    <0.001 |
+|         DDS_sin_cos_inst                                     |    <0.001 |
+|           bus_interface.regs_file_dds_sin_cos_inst           |    <0.001 |
+|         conv_reg_time_inst                                   |     0.000 |
+|         sig_mag_v3_I                                         |    <0.001 |
+|         valid_ed_inst                                        |    <0.001 |
+|       quad_inst                                              |     0.003 |
+|         latency_WE_qnt_inst                                  |    <0.001 |
+|       regs_file_acq_ip_inst                                  |     0.001 |
+|       reset_sync_fsm_reset_rf                                |    <0.001 |
+|     CORR_GEN[0].CORR_CH                                      |     0.023 |
+|       INP[0].CH_MUL                                          |     0.010 |
+|         ROM                                                  |     0.010 |
+|       PRN_GEN_CH                                             |     0.001 |
+|         RF                                                   |    <0.001 |
+|       PRN_RAM_CH                                             |    <0.001 |
+|         RF                                                   |    <0.001 |
+|         bram_block_v2_inst                                   |    <0.001 |
+|       RF                                                     |     0.002 |
+|       TIME_SCALE_CH                                          |     0.004 |
+|         RF                                                   |    <0.001 |
+|           WR_GEN[0].PULSING.(null)[0].(null)[0].PULSE_SYNC   |    <0.001 |
+|             ed_det_finish_start_inst                         |     0.000 |
+|             ed_det_finish_stop_inst                          |    <0.001 |
+|             level_sync_finish_inst                           |    <0.001 |
+|             level_sync_rqst_start_inst                       |     0.000 |
+|           WR_GEN[0].PULSING.(null)[1].(null)[1].PULSE_SYNC   |    <0.001 |
+|             ed_det_finish_start_inst                         |     0.000 |
+|             ed_det_finish_stop_inst                          |    <0.001 |
+|             level_sync_finish_inst                           |    <0.001 |
+|             level_sync_rqst_start_inst                       |     0.000 |
+|     ED_DET_IRQ_INST                                          |    <0.001 |
+|     ED_DET_SEC                                               |    <0.001 |
+|     IMI                                                      |     0.161 |
+|       AWGN_I                                                 |     0.023 |
+|         genblk1[0].RANDN_U                                   |     0.005 |
+|         genblk1[1].RANDN_U                                   |     0.005 |
+|         genblk1[2].RANDN_U                                   |     0.006 |
+|         genblk1[3].RANDN_U                                   |     0.005 |
+|       AWGN_Q                                                 |     0.024 |
+|         genblk1[0].RANDN_U                                   |     0.006 |
+|         genblk1[1].RANDN_U                                   |     0.006 |
+|         genblk1[2].RANDN_U                                   |     0.005 |
+|         genblk1[3].RANDN_U                                   |     0.005 |
+|       CH[0].IMI_CH                                           |     0.040 |
+|         PRN_GEN_CH                                           |     0.001 |
+|           RF                                                 |    <0.001 |
+|         PRN_RAM_CH                                           |    <0.001 |
+|           RF                                                 |    <0.001 |
+|           bram_block_v2_inst                                 |    <0.001 |
+|         RF                                                   |    <0.001 |
+|         TIME_SCALE_CH                                        |     0.005 |
+|           RF                                                 |    <0.001 |
+|             WR_GEN[0].PULSING.(null)[0].(null)[0].PULSE_SYNC |    <0.001 |
+|               ed_det_finish_start_inst                       |     0.000 |
+|               ed_det_finish_stop_inst                        |    <0.001 |
+|               level_sync_finish_inst                         |    <0.001 |
+|               level_sync_rqst_start_inst                     |     0.000 |
+|             WR_GEN[0].PULSING.(null)[1].(null)[1].PULSE_SYNC |    <0.001 |
+|               ed_det_finish_start_inst                       |     0.000 |
+|               ed_det_finish_stop_inst                        |    <0.001 |
+|               level_sync_finish_inst                         |    <0.001 |
+|               level_sync_rqst_start_inst                     |     0.000 |
+|         WIPER                                                |    <0.001 |
+|         dds_iq_hd                                            |     0.017 |
+|       LIM_QNT_I                                              |    <0.001 |
+|       LIM_QNT_Q                                              |    <0.001 |
+|       RF                                                     |    <0.001 |
+|       SET_INST                                               |     0.000 |
+|       connectbus_inst                                        |    <0.001 |
+|       lim_cntr_inst                                          |    <0.001 |
+|         RF                                                   |    <0.001 |
+|           WR_GEN[0].PULSING.(null)[31].(null)[0].PULSE_SYNC  |    <0.001 |
+|             ed_det_finish_start_inst                         |     0.000 |
+|             ed_det_finish_stop_inst                          |     0.000 |
+|             level_sync_finish_inst                           |    <0.001 |
+|             level_sync_rqst_start_inst                       |     0.000 |
+|       normalizer_ins                                         |     0.067 |
+|         DATA_COLLECTOR                                       |     0.006 |
+|           RAM_GEN[0].bram_block_v2_inst                      |     0.001 |
+|           RAM_GEN[1].bram_block_v2_inst                      |     0.001 |
+|           RAM_GEN[2].bram_block_v2_inst                      |     0.001 |
+|           RAM_GEN[3].bram_block_v2_inst                      |     0.001 |
+|           RF                                                 |    <0.001 |
+|             WR_GEN[6].PULSING.(null)[0].(null)[0].PULSE_SYNC |    <0.001 |
+|               ed_det_finish_start_inst                       |     0.000 |
+|               ed_det_finish_stop_inst                        |    <0.001 |
+|               level_sync_finish_inst                         |    <0.001 |
+|               level_sync_rqst_start_inst                     |     0.000 |
+|           pipe_line_bus                                      |    <0.001 |
+|         IQ_pipe_K                                            |    <0.001 |
+|         regs_file_fsm_controller_inst                        |     0.003 |
+|           WR_GEN[0].PULSING.(null)[30].(null)[1].PULSE_SYNC  |    <0.001 |
+|             ed_det_finish_start_inst                         |     0.000 |
+|             ed_det_finish_stop_inst                          |     0.000 |
+|             level_sync_finish_inst                           |    <0.001 |
+|             level_sync_rqst_start_inst                       |     0.000 |
+|           WR_GEN[0].PULSING.(null)[31].(null)[0].PULSE_SYNC  |    <0.001 |
+|             ed_det_finish_start_inst                         |     0.000 |
+|             ed_det_finish_stop_inst                          |     0.000 |
+|             level_sync_finish_inst                           |    <0.001 |
+|             level_sync_rqst_start_inst                       |     0.000 |
+|     IRQ                                                      |     0.001 |
+|       RF                                                     |    <0.001 |
+|         WR_GEN[0].PULSING.(null)[3].(null)[0].PULSE_SYNC     |    <0.001 |
+|           ed_det_finish_start_inst                           |     0.000 |
+|           ed_det_finish_stop_inst                            |    <0.001 |
+|           level_sync_finish_inst                             |    <0.001 |
+|           level_sync_rqst_start_inst                         |     0.000 |
+|     RF                                                       |    <0.001 |
+|       WR_GEN[0].PULSING.(null)[0].(null)[0].PULSE_SYNC       |    <0.001 |
+|     TIME_SCALE_COM                                           |     0.002 |
+|       PPS_DLY_SYNC                                           |    <0.001 |
+|       PPS_LEN_SYNC                                           |    <0.001 |
+|       RF                                                     |    <0.001 |
+|         WR_GEN[0].PULSING.(null)[0].(null)[0].PULSE_SYNC     |    <0.001 |
+|           ed_det_finish_start_inst                           |     0.000 |
+|           ed_det_finish_stop_inst                            |    <0.001 |
+|           level_sync_finish_inst                             |    <0.001 |
+|           level_sync_rqst_start_inst                         |     0.000 |
+|         WR_GEN[0].PULSING.(null)[1].(null)[1].PULSE_SYNC     |    <0.001 |
+|           ed_det_finish_start_inst                           |     0.000 |
+|           ed_det_finish_stop_inst                            |    <0.001 |
+|           level_sync_finish_inst                             |    <0.001 |
+|           level_sync_rqst_start_inst                         |     0.000 |
+|         WR_GEN[8].PULSING.(null)[31].(null)[2].PULSE_SYNC    |    <0.001 |
+|           ed_det_finish_start_inst                           |     0.000 |
+|           ed_det_finish_stop_inst                            |    <0.001 |
+|           level_sync_finish_inst                             |    <0.001 |
+|           level_sync_rqst_start_inst                         |     0.000 |
+|     VITDEC                                                   |     0.054 |
+|       RAM                                                    |     0.006 |
+|       RF                                                     |     0.018 |
+|         WR_GEN[0].PULSING.(null)[0].(null)[0].PULSE_SYNC     |    <0.001 |
+|           ed_det_finish_start_inst                           |    <0.001 |
+|           ed_det_finish_stop_inst                            |    <0.001 |
+|           level_sync_finish_inst                             |    <0.001 |
+|           level_sync_rqst_start_inst                         |    <0.001 |
+|     connectbus_inst                                          |     0.005 |
+|   axi3_to_inter_0_inst                                       |    <0.001 |
+|     rdata_fifo_reg_0_15_0_5                                  |    <0.001 |
+|     rdata_fifo_reg_0_15_12_17                                |    <0.001 |
+|     rdata_fifo_reg_0_15_18_23                                |    <0.001 |
+|     rdata_fifo_reg_0_15_24_29                                |    <0.001 |
+|     rdata_fifo_reg_0_15_30_31                                |    <0.001 |
+|     rdata_fifo_reg_0_15_6_11                                 |    <0.001 |
+|     rresp_fifo_reg_0_15_0_0                                  |    <0.001 |
+|     rresp_fifo_reg_0_15_1_1                                  |    <0.001 |
+|   connectbus_0_inst                                          |    <0.001 |
+|   cpu_top_inst                                               |     1.110 |
+|     zynq_inst                                                |     1.109 |
+|       processing_system7_0_0                                 |     1.109 |
+|         inst                                                 |     1.109 |
+|   deserLTC217x_i                                             |     0.000 |
+|   dma_inst                                                   |     0.004 |
+|     ED_DET_IRQ_INST                                          |    <0.001 |
+|     RF                                                       |     0.002 |
+|       WR_GEN[0].PULSING.(null)[30].(null)[1].PULSE_SYNC      |    <0.001 |
+|         ed_det_finish_start_inst                             |    <0.001 |
+|         ed_det_finish_stop_inst                              |    <0.001 |
+|         level_sync_finish_inst                               |    <0.001 |
+|         level_sync_rqst_start_inst                           |    <0.001 |
+|       WR_GEN[0].PULSING.(null)[31].(null)[0].PULSE_SYNC      |    <0.001 |
+|         ed_det_finish_start_inst                             |    <0.001 |
+|         ed_det_finish_stop_inst                              |    <0.001 |
+|         level_sync_finish_inst                               |    <0.001 |
+|         level_sync_rqst_start_inst                           |    <0.001 |
+|     fifo_wr_reg_0_15_0_5                                     |    <0.001 |
+|     fifo_wr_reg_0_15_12_17                                   |    <0.001 |
+|     fifo_wr_reg_0_15_18_23                                   |    <0.001 |
+|     fifo_wr_reg_0_15_24_29                                   |    <0.001 |
+|     fifo_wr_reg_0_15_30_31                                   |    <0.001 |
+|     fifo_wr_reg_0_15_6_11                                    |    <0.001 |
+|     level_sync_irq                                           |    <0.001 |
++--------------------------------------------------------------+-----------+
+
+
