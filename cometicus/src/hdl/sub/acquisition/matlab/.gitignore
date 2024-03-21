@@ -1,6 +1,0 @@
-# Always ignore journal and log files
-*.txt
-!/PSP_GPS/*.txt
-!/PSP_GLN/*.txt
-
-*.asv

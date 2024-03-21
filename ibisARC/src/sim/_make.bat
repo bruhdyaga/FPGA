@@ -1,1 +1,0 @@
-questasim -do tb.do

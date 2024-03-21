@@ -1,5 +1,0 @@
-# Ignore trash in bd directory except .BD files
-/bd/**/*.*
-!/bd/**/*.bd
-!/bd/*.sv
-!/bd/*.ila

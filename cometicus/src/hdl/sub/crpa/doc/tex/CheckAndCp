@@ -1,9 +1,0 @@
-#!/bin/bash
-
-echo $1
-
-ls -1 $1 2>/dev/null 1>&2
-if [ "$?" == "0" ]
-then 
-     cp $1 $2
-fi

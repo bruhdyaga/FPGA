@@ -1,1 +1,0 @@
-questasim -do do_corr_ch_test.tcl

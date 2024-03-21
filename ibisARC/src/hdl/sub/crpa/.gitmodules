@@ -1,9 +1,0 @@
-[submodule "sub/sync"]
-	path = sub/sync
-	url = ssh://git@srns.ru:221/git/sync.git
-[submodule "sub/dsp"]
-	path = sub/dsp
-	url = ssh://git@srns.ru:221/git/dsp.git
-[submodule "sub/debug"]
-	path = sub/debug
-	url = ssh://git@srns.ru:221/Lipa/debug.git

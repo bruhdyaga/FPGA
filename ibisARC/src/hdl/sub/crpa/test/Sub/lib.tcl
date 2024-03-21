@@ -1,2 +1,0 @@
-vlib tb
-quit -f

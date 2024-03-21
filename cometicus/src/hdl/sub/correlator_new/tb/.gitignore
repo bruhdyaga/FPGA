@@ -1,8 +1,0 @@
-/time_gen/
-/correlator/
-/tmp_compile/
-/calibration/
-/facq/
-
-*.wlf
-wlf*
