@@ -1,0 +1,8 @@
+/dsp_lib/
+/work/
+
+*.wlf
+wlf*
+
+cpu_sim.h
+transcript

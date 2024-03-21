@@ -1,0 +1,7 @@
+/tmp_compile/
+/facq/
+/work/
+
+*.wlf
+wlf*
+*.vstf

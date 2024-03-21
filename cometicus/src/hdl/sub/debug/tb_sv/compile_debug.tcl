@@ -1,0 +1,4 @@
+vlog -quiet -reportprogress 300 -work $WORK_LIB $THIS_PATH/../verilog/bram_block_v2.v +incdir+$SUB_PATH/dsp/verilog
+vlog -quiet -reportprogress 300 -work $WORK_LIB $THIS_PATH/../verilog_sv/data_recorder.sv +incdir+../verilog +incdir+$THIS_PATH/../verilog_sv +incdir+../verilog +incdir+$SUB_PATH/interfaces
+vlog -quiet -reportprogress 300 -work $WORK_LIB $THIS_PATH/../verilog_sv/data_collector.sv +incdir+../verilog +incdir+$THIS_PATH/../verilog_sv +incdir+../verilog +incdir+$SUB_PATH/interfaces
+vlog -quiet -reportprogress 300 -work $WORK_LIB $THIS_PATH/../verilog_sv/axi_trig.sv +incdir+../verilog +incdir+$THIS_PATH/../verilog_sv +incdir+../verilog +incdir+$SUB_PATH/interfaces
